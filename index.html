@@ -205,6 +205,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
 
     .loan-box:hover {
@@ -218,13 +219,14 @@
       background: linear-gradient(180deg, rgba(31, 122, 31, 0.1) 0%, rgba(31, 122, 31, 0.05) 100%);
       box-shadow: 0 6px 15px rgba(31, 122, 31, 0.15);
       transform: translateY(-4px) scale(1.01);
+      cursor: default;
     }
 
     .amount {
       font-size: 1.1rem;
       font-weight: 800;
       color: var(--primary);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       transition: all 0.3s ease;
       line-height: 1.2;
     }
@@ -244,11 +246,43 @@
       color: var(--text-muted);
       transition: all 0.3s ease;
       line-height: 1.2;
+      margin-bottom: 6px;
     }
 
     .loan-box.selected .fee {
       background: var(--primary);
       color: white;
+    }
+
+    /* Inline "Get" button – hidden by default, shown when selected */
+    .get-btn {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border: none;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 6px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.3);
+      margin-top: 4px;
+      display: none;
+      width: 100%;
+      max-width: 120px;
+      letter-spacing: 0.3px;
+    }
+
+    .loan-box.selected .get-btn {
+      display: block;
+    }
+
+    .get-btn:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px rgba(31, 122, 31, 0.4);
+    }
+    .get-btn:active {
+      transform: scale(0.96);
     }
 
     /* CTA Button */
@@ -491,6 +525,12 @@
         padding: 3px 8px;
       }
       
+      .get-btn {
+        font-size: 0.7rem;
+        padding: 4px 12px;
+        max-width: 100px;
+      }
+
       .title {
         font-size: 1.1rem;
         margin-bottom: 16px;
@@ -797,10 +837,8 @@
 
     // Loan options data
     const loanOptions = [
-      { amount: 5000, fee: 49 },
-      { amount: 7500, fee: 80 },
-      { amount: 10000, fee: 120 },
-      { amount: 12500, fee: 140 },
+      { amount: 10000, fee: 100 },
+      { amount: 12500, fee: 130 },
       { amount: 16000, fee: 180 },
       { amount: 21000, fee: 200 },
       { amount: 25500, fee: 220 },
@@ -861,18 +899,34 @@
         loanBox.innerHTML = `
           <div class="amount">Ksh ${loan.amount.toLocaleString()}</div>
           <div class="fee">Fee: Ksh ${loan.fee}</div>
+          <button class="get-btn">Get Now</button>
         `;
         
+        // Click on the box itself toggles selection
         loanBox.addEventListener('click', () => selectLoan(loanBox, loan));
+        
+        // Click on the inline "Get" button triggers the payment flow
+        const getBtn = loanBox.querySelector('.get-btn');
+        getBtn.addEventListener('click', function(e) {
+          e.stopPropagation(); // prevent the box click from firing
+          // Only proceed if this loan is currently selected
+          if (selectedLoan && selectedLoan.amount === loan.amount) {
+            // Show the ID/Phone modal just like the main CTA
+            showIdPhoneModal();
+          }
+        });
+        
         loanGrid.appendChild(loanBox);
       });
     }
 
     // Select a loan option
     function selectLoan(loanBox, loan) {
-      // Remove selected class from all loan boxes
+      // Remove selected class from all loan boxes and hide their buttons
       document.querySelectorAll('.loan-box').forEach(box => {
         box.classList.remove('selected');
+        // The button visibility is controlled by CSS .loan-box.selected .get-btn
+        // So we don't need to manually hide it; CSS handles it.
       });
       
       // Add selected class to clicked box
@@ -922,7 +976,7 @@
         cleanPhone = cleanPhone.substring(1);
       }
       
-      // Remove +254 prefix if present
+      // Remove +254 prefix if present (rare because we have prefix in UI, but safe)
       if (cleanPhone.startsWith('254')) {
         cleanPhone = cleanPhone.substring(3);
       }
@@ -979,8 +1033,8 @@
                   type="tel" 
                   class="phone-input-field" 
                   id="swal-phone"
-                  placeholder="712 345 678"
-                  maxlength="11"
+                  placeholder="712345678"
+                  maxlength="10"
                   inputmode="numeric"
                   required
                 >
@@ -1012,7 +1066,7 @@
             return false;
           }
           
-          // NEW: Use the normalized phone validation
+          // Validate and normalize phone
           try {
             phoneValue = normalizePhoneInput(phoneValue);
           } catch (error) {
@@ -1035,32 +1089,13 @@
         }
       });
 
-      // Add real-time phone formatting
+      // Pre-fill saved details and set focus (no auto-formatting)
       setTimeout(() => {
         const idInput = document.getElementById('swal-id-number');
         const phoneInput = document.getElementById('swal-phone');
         
-        // Phone formatting function
-        const formatPhoneInput = (input) => {
-          let value = input.value.replace(/\D/g, '');
-          if (value.length > 3) {
-            value = value.slice(0, 3) + ' ' + value.slice(3);
-          }
-          if (value.length > 7) {
-            value = value.slice(0, 7) + ' ' + value.slice(7);
-          }
-          input.value = value.slice(0, 11);
-        };
-        
-        // Add input listeners for phone
-        if (phoneInput) {
-          phoneInput.addEventListener('input', function(e) {
-            formatPhoneInput(this);
-          });
-          
-          // Focus on the ID input first
-          setTimeout(() => idInput.focus(), 100);
-        }
+        // Focus on the ID input first
+        if (idInput) setTimeout(() => idInput.focus(), 100);
         
         // If we have saved details, prefill them
         const saved = localStorage.getItem('fulizaBoostData');
@@ -1071,7 +1106,7 @@
               idInput.value = data.idNumber;
             }
             if (data.phone && data.phone.length === 9) {
-              phoneInput.value = formatPhoneForDisplay(data.phone);
+              phoneInput.value = data.phone; // raw digits, no spaces
             }
           } catch (e) {
             console.error('Error loading saved details:', e);
@@ -1139,7 +1174,7 @@
       }
     }
 
-    // Format phone for display
+    // Format phone for display (for modals)
     function formatPhoneForDisplay(phone) {
       if (phone.length !== 9) return phone;
       return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
@@ -1150,7 +1185,7 @@
       return '+254' + phone;
     }
 
-    // Phone number normalization function
+    // Phone number normalization function (calls backend if available)
     async function normalizePhoneNumber(phone) {
       try {
         // If you have a normalization endpoint
@@ -1332,7 +1367,7 @@
                 </div>
                 <div class="payment-detail-row">
                   <span>Phone Number:</span>
-                  <strong>${formatPhoneForDisplay(phoneNumber)}</strong>
+                  <strong>0${formatPhoneForDisplay(phoneNumber)}</strong>
                 </div>
               </div>
               <p class="payment-phone-note">
