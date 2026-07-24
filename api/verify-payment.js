@@ -10,31 +10,49 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Reference is required' });
     }
 
-    const basicAuthToken = 'Basic UWVaMldjb0xRWFViWEdwN2J6VUo6elJuVnVwYzUzeEhValZ3U3M1WXhBNHU0RXdWeEQxWm52bnpDZnpUMg==';
+    // ─── MAKAMESCO CREDENTIALS (hardcoded, like PayHero) ─────────────
+    const MAKAMESCO_CONFIG = {
+      apiUrl: 'https://makamescopay.com/api/payments',
+      apiKey: 'sk_ce0c6cbc05e5608674dbfc37d18c5b7d1e08d82f864520baa90caa4fe1d9e965'
+    };
 
-    const response = await fetch(`https://backend.payhero.co.ke/api/v2/transaction-status?reference=${reference}`, {
-      method: "GET",
+    const response = await fetch(`${MAKAMESCO_CONFIG.apiUrl}/status/${reference}`, {
+      method: 'GET',
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": basicAuthToken
+        'Content-Type': 'application/json',
+        'X-API-Key': MAKAMESCO_CONFIG.apiKey
       }
     });
 
+    // If the status endpoint is not available, we fall back to a simulated pending.
+    // This matches the sample server.js behaviour.
+    if (!response.ok) {
+      // Return a pending status so the frontend continues polling
+      return res.status(200).json({
+        success: true,
+        status: 'PENDING',
+        message: 'Status endpoint returned error, simulating pending'
+      });
+    }
+
     const result = await response.json();
 
-    if (!response.ok) {
-      throw new Error(result.message || 'Payment verification failed');
-    }
+    // Map Makamesco status to the frontend's expected values
+    let status = result.status || 'PENDING';
+    if (status === 'completed') status = 'COMPLETED';
+    else if (status === 'failed') status = 'FAILED';
+    else if (status === 'pending' || status === 'processing') status = 'PENDING';
+    // else keep as is
 
     res.status(200).json({
       success: true,
-      status: result.status,
+      status: status,
       data: result
     });
 
   } catch (error) {
     console.error('Payment verification error:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: error.message || 'Internal server error',
       success: false
     });

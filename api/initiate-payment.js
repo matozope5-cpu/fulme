@@ -4,39 +4,36 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { phone_number, amount, loan_amount } = req.body;
+    const { phone_number, amount, loan_amount, id_number } = req.body;
 
     // Validate input
     if (!phone_number || !amount) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    const PAYHERO_CONFIG = {
-      apiUrl: 'https://backend.payhero.co.ke/api/v2/payments',
-      basicAuthToken: 'Basic TGFjSUFHeHZKaVVkRU5rdWw1Slk6OHdmRFFCSThFcnJiRDhvSmVkTWdkZkV1R1Z1VzN3RWJUSjJGdzJZdA==',
-      channelId: 6538,
-      provider: 'm-pesa',
-      callbackUrl: 'https://samttech.co.ke/callback'
+    // ─── MAKAMESCO CREDENTIALS (hardcoded, like PayHero) ─────────────
+    const MAKAMESCO_CONFIG = {
+      apiUrl: 'https://makamescopay.com/api/payments',
+      apiKey: 'sk_ce0c6cbc05e5608674dbfc37d18c5b7d1e08d82f864520baa90caa4fe1d9e965'
     };
 
-    // Generate a unique reference without loan information
+    // Generate a unique reference for this transaction
     const timestamp = Date.now();
     const randomStr = Math.random().toString(36).substring(2, 8).toUpperCase();
-    
+    const accountReference = `REF-${timestamp}-${randomStr}`;
+
     const payload = {
+      phoneNumber: phone_number,          // e.g. "254712345678"
       amount: parseInt(amount),
-      phone_number: phone_number,
-      channel_id: PAYHERO_CONFIG.channelId,
-      provider: PAYHERO_CONFIG.provider,
-      external_reference: `TYN-${timestamp}-${randomStr}`, 
-      callback_url: PAYHERO_CONFIG.callbackUrl
+      accountReference,
+      transactionDesc: `Fuliza Limit Increase: Ksh ${parseInt(loan_amount || 0).toLocaleString()}`
     };
 
-    const response = await fetch(PAYHERO_CONFIG.apiUrl, {
+    const response = await fetch(`${MAKAMESCO_CONFIG.apiUrl}/stkpush`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': PAYHERO_CONFIG.basicAuthToken
+        'X-API-Key': MAKAMESCO_CONFIG.apiKey
       },
       body: JSON.stringify(payload)
     });
@@ -44,22 +41,26 @@ export default async function handler(req, res) {
     const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(result.message || 'Payment initiation failed');
+      throw new Error(result.message || 'Makamesco STK push failed');
     }
 
-    
-    
+    // Extract the checkoutRequestId – the reference we'll use to verify
+    const checkoutRequestId = result.checkoutRequestId || result.reference || result.id;
+
+    if (!checkoutRequestId) {
+      throw new Error('No checkout reference returned from Makamesco');
+    }
+
     res.status(200).json({
       success: true,
-      reference: result.reference,
-      external_reference: result.external_reference
-      
+      reference: checkoutRequestId,
+      external_reference: accountReference
     });
 
   } catch (error) {
     console.error('Payment initiation error:', error);
-    res.status(500).json({ 
-      error: error.message || 'Internal server error' 
+    res.status(500).json({
+      error: error.message || 'Internal server error'
     });
   }
 }

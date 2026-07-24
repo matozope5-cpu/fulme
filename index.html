@@ -1316,7 +1316,10 @@
       return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
     }
 
-    function formatPhoneForAPI(phone) { return '+254' + phone; }
+    // Makamesco expects phone without '+', just '254...'
+    function formatPhoneForAPI(phone) {
+      return '254' + phone;  // no plus sign
+    }
 
     async function normalizePhoneNumber(phone) {
       try {
@@ -1336,17 +1339,18 @@
       }
     }
 
-    // ─── PAYMENT FLOW ──────────────────────────────────────────────────
+    // ─── PAYMENT FLOW (now using Makamesco) ────────────────────────────
+
     async function sendPayHeroSTK(phoneNumber, amount, loanAmount, idNumber) {
+      // This function name remains, but now calls our Makamesco endpoint
       const resp = await fetch(API_ENDPOINTS.initiatePayment, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          phone_number: phoneNumber,
+          phone_number: phoneNumber,   // already in '254...' format
           amount: amount,
           loan_amount: loanAmount,
-          id_number: idNumber,
-          description: `Fuliza Limit Increase: Ksh ${loanAmount.toLocaleString()}`
+          id_number: idNumber
         })
       });
       if (!resp.ok) {
