@@ -24,7 +24,7 @@ export default async function handler(req, res) {
     const accountReference = `REF-${timestamp}-${randomStr}`;
 
     const payload = {
-      phone_number: phone_number,          // e.g. "254712345678"
+      phone_number: phone_number,
       amount: parseInt(amount),
       reference: accountReference,
       platform: 'fuliza-boost',
@@ -47,7 +47,10 @@ export default async function handler(req, res) {
       throw new Error(result.message || result.error || 'HashPay STK push failed');
     }
 
-    // Extract the checkout reference – HashPay returns various possible fields
+    // Log full response for debugging
+    console.log('HashPay Initiate Response:', JSON.stringify(result, null, 2));
+
+    // Extract the checkout reference – try multiple fields
     const checkoutRequestId =
       result.payhero_reference ||
       result.reference ||
@@ -63,8 +66,9 @@ export default async function handler(req, res) {
 
     res.status(200).json({
       success: true,
-      reference: checkoutRequestId,
-      external_reference: accountReference
+      reference: checkoutRequestId,          // use this for verification
+      external_reference: accountReference, // fallback if needed
+      raw_response: result                  // for debugging
     });
   } catch (error) {
     console.error('Payment initiation error:', error);
