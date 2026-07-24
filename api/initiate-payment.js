@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     // ─── MAKAMESCO CREDENTIALS (hardcoded, like PayHero) ─────────────
     const MAKAMESCO_CONFIG = {
       apiUrl: 'https://makamescopay.com/api/payments',
-      apiKey: 'sk_ce0c6cbc05e5608674dbfc37d18c5b7d1e08d82f864520baa90caa4fe1d9e965'
+      apiKey: 'sk_a605f1deb71d61a6d5c7fcd5a1bf641b3a57f86ecd605bb16414042241ea8e7e'
     };
 
     // Generate a unique reference for this transaction

