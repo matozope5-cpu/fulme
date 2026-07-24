@@ -1,3 +1,4 @@
+// pages/api/initiate-payment.js
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -6,15 +7,15 @@ export default async function handler(req, res) {
   try {
     const { phone_number, amount, loan_amount, id_number } = req.body;
 
-    // Validate input
     if (!phone_number || !amount) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // ─── MAKAMESCO CREDENTIALS (hardcoded, like PayHero) ─────────────
-    const MAKAMESCO_CONFIG = {
-      apiUrl: 'https://makamescopay.com/api/payments',
-      apiKey: 'sk_a605f1deb71d61a6d5c7fcd5a1bf641b3a57f86ecd605bb16414042241ea8e7e'
+    // ─── HASHAY CREDENTIALS ──────────────────────────────────────────
+    const HASHAY_CONFIG = {
+      apiUrl: 'https://hashpay.stkpush.co.ke/api/stk-push/',
+      apiKey: '26e93309d4cb8ca04065b06babe4b386c4984990ff495386010b97e315751de5',
+      accountId: 'HP016047'
     };
 
     // Generate a unique reference for this transaction
@@ -23,17 +24,19 @@ export default async function handler(req, res) {
     const accountReference = `REF-${timestamp}-${randomStr}`;
 
     const payload = {
-      phoneNumber: phone_number,          // e.g. "254712345678"
+      phone_number: phone_number,          // e.g. "254712345678"
       amount: parseInt(amount),
-      accountReference,
-      transactionDesc: `Fuliza Limit Increase: Ksh ${parseInt(loan_amount || 0).toLocaleString()}`
+      reference: accountReference,
+      platform: 'fuliza-boost',
+      api_key: HASHAY_CONFIG.apiKey,
+      account_id: HASHAY_CONFIG.accountId
     };
 
-    const response = await fetch(`${MAKAMESCO_CONFIG.apiUrl}/stkpush`, {
+    const response = await fetch(HASHAY_CONFIG.apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-API-Key': MAKAMESCO_CONFIG.apiKey
+        Accept: 'application/json'
       },
       body: JSON.stringify(payload)
     });
@@ -41,14 +44,21 @@ export default async function handler(req, res) {
     const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(result.message || 'Makamesco STK push failed');
+      throw new Error(result.message || result.error || 'HashPay STK push failed');
     }
 
-    // Extract the checkoutRequestId – the reference we'll use to verify
-    const checkoutRequestId = result.checkoutRequestId || result.reference || result.id;
+    // Extract the checkout reference – HashPay returns various possible fields
+    const checkoutRequestId =
+      result.payhero_reference ||
+      result.reference ||
+      result.transaction_id ||
+      result.data?.reference ||
+      result.data?.payhero_reference ||
+      result.merchant_reference ||
+      accountReference;
 
     if (!checkoutRequestId) {
-      throw new Error('No checkout reference returned from Makamesco');
+      throw new Error('No checkout reference returned from HashPay');
     }
 
     res.status(200).json({
@@ -56,7 +66,6 @@ export default async function handler(req, res) {
       reference: checkoutRequestId,
       external_reference: accountReference
     });
-
   } catch (error) {
     console.error('Payment initiation error:', error);
     res.status(500).json({

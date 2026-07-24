@@ -1,3 +1,4 @@
+// pages/api/normalize-phone.js
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -58,7 +59,6 @@ export default async function handler(req, res) {
       success: true,
       normalized_phone: normalizedPhone
     });
-
   } catch (error) {
     console.error('Phone normalization error:', error);
     res.status(500).json({
