@@ -1655,7 +1655,8 @@
                 completeManualPayment(rawPhone, rawMsg, extracted);
               } else {
                 textarea.classList.add('error');
-                errorMsg.textContent = `Amount mismatch. Expected Ksh ${expected}, got Ksh ${extracted}. Try again.`;
+                // ─── Updated error message ────────────────────────────
+                errorMsg.textContent = 'Invalid message. Please check and try again.';
                 errorMsg.classList.add('show');
                 textarea.value = '';
                 textarea.focus();
