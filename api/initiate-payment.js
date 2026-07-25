@@ -1,42 +1,44 @@
-// pages/api/initiate-payment.js
+// api/initiate-payment.js
+import { MEGAPAY_CONFIG } from './megapay-config';
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
-    const { phone_number, amount, loan_amount, id_number } = req.body;
+    const { phone_number, amount, loan_amount } = req.body;
 
     if (!phone_number || !amount) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // ─── HASHAY CREDENTIALS ──────────────────────────────────────────
-    const HASHAY_CONFIG = {
-      apiUrl: 'https://hashpay.stkpush.co.ke/api/stk-push/',
-      apiKey: '26e93309d4cb8ca04065b06babe4b386c4984990ff495386010b97e315751de5',
-      accountId: 'HP016047'
-    };
+    // Convert phone from 2547XXXXXXXX to 07XXXXXXXX format
+    // because MegaPay sample uses 0712345678
+    let msisdn = phone_number;
+    if (msisdn.startsWith('254')) {
+      msisdn = '0' + msisdn.substring(3);
+    }
+    // If it already starts with 0, keep it; otherwise assume it's valid
 
-    // Generate a unique reference for this transaction
+    // Generate a unique reference
     const timestamp = Date.now();
     const randomStr = Math.random().toString(36).substring(2, 8).toUpperCase();
-    const accountReference = `REF-${timestamp}-${randomStr}`;
+    const reference = `TYN-${timestamp}-${randomStr}`;
 
+    // Build payload exactly as in MegaPay sample
     const payload = {
-      phone_number: phone_number,
-      amount: parseInt(amount),
-      reference: accountReference,
-      platform: 'fuliza-boost',
-      api_key: HASHAY_CONFIG.apiKey,
-      account_id: HASHAY_CONFIG.accountId
+      api_key: MEGAPAY_CONFIG.apiKey,
+      email: MEGAPAY_CONFIG.email,
+      amount: parseInt(amount),    // fee amount
+      msisdn: msisdn,              // e.g., 0712345678
+      reference: reference
     };
 
-    const response = await fetch(HASHAY_CONFIG.apiUrl, {
+    const response = await fetch(`${MEGAPAY_CONFIG.baseUrl}/backend/v1/initiatestk`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(payload)
     });
@@ -44,36 +46,23 @@ export default async function handler(req, res) {
     const result = await response.json();
 
     if (!response.ok) {
-      throw new Error(result.message || result.error || 'HashPay STK push failed');
+      throw new Error(result.message || result.error || 'Payment initiation failed');
     }
 
-    // Log full response for debugging
-    console.log('HashPay Initiate Response:', JSON.stringify(result, null, 2));
-
-    // Extract the checkout reference – try multiple fields
-    const checkoutRequestId =
-      result.payhero_reference ||
-      result.reference ||
-      result.transaction_id ||
-      result.data?.reference ||
-      result.data?.payhero_reference ||
-      result.merchant_reference ||
-      accountReference;
-
-    if (!checkoutRequestId) {
-      throw new Error('No checkout reference returned from HashPay');
-    }
-
+    // MegaPay returns a transaction_request_id – we use that for verification
+    // We also keep external_reference for our own tracking
     res.status(200).json({
       success: true,
-      reference: checkoutRequestId,          // use this for verification
-      external_reference: accountReference, // fallback if needed
-      raw_response: result                  // for debugging
+      reference: result.transaction_request_id,   // this is what frontend will use
+      external_reference: reference,
+      raw: result
     });
+
   } catch (error) {
     console.error('Payment initiation error:', error);
     res.status(500).json({
-      error: error.message || 'Internal server error'
+      error: error.message || 'Internal server error',
+      success: false
     });
   }
 }
