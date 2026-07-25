@@ -13,7 +13,6 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Reference is required' });
     }
 
-    // The reference here is the transaction_request_id from initiation
     const payload = {
       api_key: MEGAPAY_CONFIG.apiKey,
       email: MEGAPAY_CONFIG.email,
@@ -22,35 +21,64 @@ export default async function handler(req, res) {
 
     const response = await fetch(`${MEGAPAY_CONFIG.baseUrl}/backend/v1/transactionstatus`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
 
     const result = await response.json();
 
+    // 🔍 Log the full response to see what MegaPay returns
+    console.log('MegaPay verification response:', JSON.stringify(result, null, 2));
+
     if (!response.ok) {
       throw new Error(result.message || result.error || 'Payment verification failed');
     }
 
-    // Map MegaPay status to our internal status
-    // You may need to adjust based on actual response fields
-    // From sample, the response might have a "status" field like "completed", "pending", etc.
+    // --- Determine status from various possible fields ---
+    let status = result.status || result.result_code || result.state || result.Status || '';
+
+    // If status is numeric (e.g., 0 = success, 1 = pending, 2 = failed), map it
+    if (typeof status === 'number') {
+      // Adjust these numbers based on MegaPay's actual codes
+      const numericMap = {
+        0: 'COMPLETED',
+        1: 'PENDING',
+        2: 'FAILED',
+        3: 'CANCELLED'
+      };
+      status = numericMap[status] || String(status);
+    }
+
+    // Normalize status string to uppercase for mapping
+    const statusUpper = typeof status === 'string' ? status.toUpperCase() : '';
+
+    // Map status to our internal statuses
     const statusMap = {
-      'completed': 'COMPLETED',
-      'success': 'SUCCESS',
-      'paid': 'COMPLETED',
-      'pending': 'PENDING',
-      'failed': 'FAILED',
-      'cancelled': 'CANCELLED'
+      'COMPLETED': 'COMPLETED',
+      'SUCCESS': 'COMPLETED',
+      'PAID': 'COMPLETED',
+      'PENDING': 'PENDING',
+      'FAILED': 'FAILED',
+      'CANCELLED': 'CANCELLED',
+      '0': 'COMPLETED',   // if returned as string
+      '1': 'PENDING',
+      '2': 'FAILED',
+      '3': 'CANCELLED'
     };
-    const mappedStatus = statusMap[result.status?.toLowerCase()] || result.status;
+
+    const mappedStatus = statusMap[statusUpper] || statusUpper || 'UNKNOWN';
+
+    // If status is still unknown, log the raw data for debugging
+    if (mappedStatus === 'UNKNOWN') {
+      console.warn('Unknown status received from MegaPay:', result);
+    }
 
     res.status(200).json({
       success: true,
       status: mappedStatus,
-      data: result
+      data: result,
+      // Also return raw status for frontend if needed
+      raw_status: status
     });
 
   } catch (error) {
