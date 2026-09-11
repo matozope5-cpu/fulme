@@ -1035,7 +1035,7 @@
         <span class="hot-title">Ksh 50,000 Limit</span>
         <span class="hot-timer">
           <i class="far fa-clock"></i>
-          <span class="countdown" id="countdownTimer">2h 47m</span>
+          <span class="countdown" id="countdownTimer">--h --m --s</span>
         </span>
       </div>
       <div class="hot-deal-right">
@@ -1195,7 +1195,6 @@ let feedEntries = [];
 let feedIndex = 0;
 let feedInterval = null;
 let countdownInterval = null;
-let countdownSeconds = 3 * 3600;
 let pendingRetryData = null;
 
 const loanGrid = document.getElementById('loan-grid');
@@ -1307,21 +1306,36 @@ function showFeedEntry(index) {
     `📱 ${displayPhone} → <span class="highlight">Ksh ${displayAmount}</span>${hotBadge} <span class="time">(${timeLabel})</span>`;
 }
 
-// ─── COUNTDOWN TIMER ──────────────────────────────────────────────
+// ─── COUNTDOWN TIMER (Nairobi / EAT, resets at midnight) ─────────
+// Nairobi (EAT) is UTC+3 all year round — no daylight saving.
+const NAIROBI_OFFSET_MS = 3 * 60 * 60 * 1000;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+// Milliseconds remaining until the next midnight in Nairobi.
+// Because it's derived from the absolute clock, the value is identical
+// on every device and survives page refreshes automatically.
+function getMsUntilNairobiMidnight() {
+  const nairobiNow = Date.now() + NAIROBI_OFFSET_MS;
+  const nextNairobiMidnight = (Math.floor(nairobiNow / DAY_MS) + 1) * DAY_MS;
+  return nextNairobiMidnight - nairobiNow;
+}
+
 function startCountdown() {
   updateCountdownDisplay();
-  countdownInterval = setInterval(() => {
-    countdownSeconds--;
-    if (countdownSeconds <= 0) countdownSeconds = 3 * 3600;
-    updateCountdownDisplay();
-  }, 1000);
+  if (countdownInterval) clearInterval(countdownInterval);
+  countdownInterval = setInterval(updateCountdownDisplay, 1000);
 }
 
 function updateCountdownDisplay() {
-  const h = Math.floor(countdownSeconds / 3600);
-  const m = Math.floor((countdownSeconds % 3600) / 60);
-  const s = countdownSeconds % 60;
-  countdownEl.textContent = `${h}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
+  const msLeft = Math.max(0, getMsUntilNairobiMidnight());
+  const totalSeconds = Math.floor(msLeft / 1000);
+
+  const h = Math.floor(totalSeconds / 3600);
+  const m = Math.floor((totalSeconds % 3600) / 60);
+  const s = totalSeconds % 60;
+
+  countdownEl.textContent =
+    `${h}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
 }
 
 // ─── HOT DEAL BUTTON ──────────────────────────────────────────────
